@@ -37,12 +37,16 @@ Goal for tomorrow (3 June)
 - Download data
   - From SingStat and FRED
     - All GDP data from SingStat?
+    - write data downlader for SingStat data
+    - use inspiration from old repo
+    - one subseries, one CSV file. (Does this make sense? How to align with FRED?)
       - How to deal with sector levels?
       - main problem is model needs to realise the correct level of depth to go for each query
         - need to prompt it better.
   - think of way to ogranise data from FRED
 - Write dataset annotator
-- Upload data
+- Upload data to object storage?
+  - check options for object storage out
 - Write dataset selector
 - Write mockup in figma
 - work your ass off!!
