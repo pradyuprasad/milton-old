@@ -8,3 +8,29 @@ The basic thesis:
 
 - We take over that. You focus on your writing. We focus on the technical part
 
+How do we do this?
+- local storage of data in GPT-readable format
+- pick the right dataset(s)
+- use those to answer the question and generate cool graphs
+- send to user
+
+What are the steps?
+- Download the data
+  - What data?
+  - Singapore GDP and inflation data, I have already built a downloader for SGDataProject
+  - Build MVP on that tomorrow.
+  - What can I do in this that is better than SGDataProject??
+    - Basic structure is the same as always
+    - Have a lot of CSV files (do I need to?)
+    - Make a very good dataset selector
+    - Make a very good code writing agent
+    - ???
+    - Profit
+
+Goal for tomorrow (3 June)
+- Download data
+- Write dataset annotator
+- Upload data
+- Write dataset selector
+- Write mockup in figma
+- work your ass off!!
