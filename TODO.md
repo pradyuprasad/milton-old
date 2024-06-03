@@ -48,9 +48,3 @@ Goal for tomorrow (3 June)
       - main problem is model needs to realise the correct level of depth to go for each query
         - need to prompt it better.
   - think of way to ogranise data from FRED
-- Write dataset annotator
-- Upload data to object storage?
-  - check options for object storage out
-- Write dataset selector
-- Write mockup in figma
-- work your ass off!!
