@@ -75,7 +75,7 @@ def fix_pair(pair: Dict[str, str], date_type: str) -> Dict[str, Any]:
         output['value'] = float(pair['value'])
     return output
 
-def series_to_csv(file_name: str, series_data: Dict[str, Any]) -> None:
+def element_to_csv_convertor(file_name: str, element_data: Dict[str, Any]) -> None:
     """
     Converts a series of data into a CSV file, determining the frequency of data points
     and writing to a file in a specified directory.
@@ -88,7 +88,7 @@ def series_to_csv(file_name: str, series_data: Dict[str, Any]) -> None:
         None
     """
     frequency = "quarterly" if "GDP" in file_name or "Consumer" in file_name or "CPI" in file_name else "monthly"
-    new_data = list(map(lambda pair: fix_pair(pair, frequency), series_data))
+    new_data = list(map(lambda pair: fix_pair(pair, frequency), element_data))
     output_dir = '../data'
     print(file_name)
     with open(f'{output_dir}/{file_name}.csv', 'w', newline='') as f:
@@ -118,23 +118,23 @@ def find_parent_index(index: str) -> Optional[str]:
     else:
         return None
 
-def find_parent_csv(dataset_name: str, index_to_series: Dict[str, str], series_to_index: Dict[str, str], series_to_CSV: Dict[str, str]) -> Optional[str]:
+def find_parent_csv(element_name: str, index_to_element: Dict[str, str], element_to_index: Dict[str, str], element_to_CSV: Dict[str, str]) -> Optional[str]:
     """
     Retrieves the parent CSV file name for a given dataset based on its index hierarchy.
 
     Args:
-        dataset_name (str): The name of the dataset to find the parent for.
-        index_to_series (Dict[str, str]): A mapping of index numbers to series names.
-        series_to_index (Dict[str, str]): A mapping of series names to index numbers.
-        series_to_CSV (Dict[str, str]): A mapping of series names to their corresponding CSV file names.
+        element_name (str): The name of the dataset to find the parent for.
+        index_to_element (Dict[str, str]): A mapping of index numbers to series names.
+        element_to_index (Dict[str, str]): A mapping of series names to index numbers.
+        element_to_CSV (Dict[str, str]): A mapping of series names to their corresponding CSV file names.
 
     Returns:
         Optional[str]: The name of the parent CSV file, or None if no parent exists.
     """
-    index:str = series_to_index[dataset_name]
+    index:str = element_to_index[element_name]
     parent_index:str = find_parent_index(index)
     if parent_index:
-        return series_to_CSV[index_to_series[parent_index]]
+        return element_to_CSV[index_to_element[parent_index]]
     else:
         return None
     
@@ -158,31 +158,31 @@ def find_depth(index: str) -> str:
     elif count == 3:
         return "SubSector"
 
-def find_metadata(dataset_name: str, index_to_series: str, series_to_index: str, series_to_CSV: Dict[str, str]) -> Dict:
+def find_metadata(element_name: str, index_to_element: str, element_to_index: str, element_to_CSV: Dict[str, str], aggregation_name:str) -> Dict:
     """
     Constructs the metadata for a dataset, including the parent CSV, sector level, and basic identifiers
     like country and source.
 
     Args:
-        dataset_name (str): The name of the dataset to find metadata for.
-        index_to_series (Dict[str, str]): A mapping of index numbers to series names.
-        series_to_index (Dict[str, str]): A mapping of series names to index numbers.
-        series_to_CSV (Dict[str, str]): A mapping of series names to their corresponding CSV file names.
+        element_name (str): The name of the dataset to find metadata for.
+        index_to_element (Dict[str, str]): A mapping of index numbers to series names.
+        element_to_index (Dict[str, str]): A mapping of series names to index numbers.
+        element_to_CSV (Dict[str, str]): A mapping of series names to their corresponding CSV file names.
 
     Returns:
         Dict: A dictionary containing metadata information including parent CSV, sector level, name, country, and source.
     """
-    parent_CSV = find_parent_csv(dataset_name, index_to_series, series_to_index, series_to_CSV)
-    CSV_depth = find_depth(series_to_index[dataset_name])
-    name_to_be_stored = dataset_name
+    parent_CSV = find_parent_csv(element_name, index_to_element, element_to_index, element_to_CSV)
+    CSV_depth = find_depth(element_to_index[element_name])
+    name_to_be_stored = element_name
     Country = "Singapore"
     Source = "SingStat"
     type_of_data = ""
-    if "GDP" in dataset_name:
-        if "Real" in dataset_name or "real" in dataset_name:
-            type_of_data = "Real GDP"
-        elif "Nominal" in dataset_name or "nominal" in dataset_name:
-            type_of_data = "Nominal GDP"
+    if "GDP" in aggregation_name:
+        if "Real" in aggregation_name or "real" in aggregation_name:
+            type_of_data = "Real_GDP"
+        elif "Nominal" in aggregation_name or "nominal" in aggregation_name:
+            type_of_data = "Nominal_GDP"
     
     return {
         "parent_CSV": parent_CSV,

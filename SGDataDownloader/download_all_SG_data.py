@@ -1,6 +1,6 @@
 import json
 from download_dataseries import return_data_series_json
-from utils import series_to_csv, find_metadata
+from utils import element_to_csv_convertor, find_metadata
 import re
 from typing import *
 from get_metadata import get_metadata
@@ -8,38 +8,38 @@ from get_metadata import get_metadata
 def main():
     file_path = "list_of_aggregations.json"
     with open(file_path, 'r') as file:
-        dataseries_list = json.load(file)
-    # process each list 
-    for series in dataseries_list:
+        data_aggregation_list = json.load(file)
+    # process each aggregation 
+    for aggregation in data_aggregation_list:
         # this is the actual data of the series
-        output = return_data_series_json(series['dataseries_id'])
+        data_agg_dict = return_data_series_json(aggregation['dataseries_id'])
 
         # this is the metadata for each series
-        metadata:Dict = get_metadata(series['dataseries_id'])
+        metadata:Dict = get_metadata(aggregation['dataseries_id'])
 
         # make mappings for index to series, and vice versa
-        index_to_series: Dict[str, str] = {}
-        series_to_index: Dict[str, str] = {}
+        index_to_element: Dict[str, str] = {}
+        element_to_index: Dict[str, str] = {}
         for series_name in (metadata['Data']['records']['row']):
-            index_to_series[series_name['seriesNo']] = series_name['rowText']
-            series_to_index[series_name['rowText']] = series_name['seriesNo']
+            index_to_element[series_name['seriesNo']] = series_name['rowText']
+            element_to_index[series_name['rowText']] = series_name['seriesNo']
 
         # list of subseries in each series
-        new_dataset_list = list(output.keys())
+        new_element_list = list(data_agg_dict.keys())
 
         # store mappings of series name to CSV for metadata processing later
-        series_name_to_csv:Dict = {}
-        for i in range(len(new_dataset_list)):
-            # for each subseries in new_dataset_list, write it to a csv
-            dataset_name = series['internal_name']
-            csv_name = dataset_name.replace(' ', '_') + '_'+ re.sub(r'_+', '_', new_dataset_list[i].replace(' ', '_').replace('-', '')) 
-            series_name_to_csv[new_dataset_list[i]] = csv_name + '.csv'
-            series_to_csv(csv_name, output[new_dataset_list[i]])
+        element_name_to_csv:Dict = {}
+        for i in range(len(new_element_list)):
+            # for each subseries in new_element_list, write it to a csv
+            aggregation_name = aggregation['internal_name']
+            csv_name = aggregation_name.replace(' ', '_') + '_'+ re.sub(r'_+', '_', new_element_list[i].replace(' ', '_').replace('-', '')) 
+            element_name_to_csv[new_element_list[i]] = csv_name + '.csv'
+            element_to_csv_convertor(csv_name, data_agg_dict[new_element_list[i]])
         
-        series_list = list(series_name_to_csv.keys())
+        elements_list = list(element_name_to_csv.keys())
         # map CSV to metadata
-        for i in range(len(series_list)):
-            meta_data = find_metadata(series_list[i], index_to_series, series_to_index, series_name_to_csv)
+        for i in range(len(elements_list)):
+            meta_data = find_metadata(elements_list[i], index_to_element, element_to_index, element_name_to_csv, aggregation['internal_name'])
             print(meta_data)
 
 
