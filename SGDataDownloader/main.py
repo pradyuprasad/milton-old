@@ -4,6 +4,7 @@ from typing import *
 from download_dataseries import return_data_series_json
 from utils import element_to_csv_convertor, find_metadata
 from get_metadata import get_metadata
+import os
 
 def load_aggregation_list(file_path: str) -> List[Dict]:
     """Loads the list of data aggregations from a JSON file.
@@ -105,7 +106,8 @@ def process_aggregation(aggregation: Dict) -> None:
 
 def main():
     """Main function to load and process data aggregations."""
-    file_path = "list_of_aggregations.json"
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(script_dir, 'list_of_aggregations.json')
     data_aggregation_list = load_aggregation_list(file_path)
     for aggregation in data_aggregation_list:
         process_aggregation(aggregation)
