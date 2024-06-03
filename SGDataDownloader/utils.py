@@ -2,6 +2,7 @@ from typing import *
 from datetime import date
 import csv
 import re
+import os
 
 
 def is_leap_year(year: int) -> bool:
@@ -89,9 +90,11 @@ def element_to_csv_convertor(file_name: str, element_data: Dict[str, Any]) -> No
     """
     frequency = "quarterly" if "GDP" in file_name or "Consumer" in file_name or "CPI" in file_name else "monthly"
     new_data = list(map(lambda pair: fix_pair(pair, frequency), element_data))
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    data_dir = os.path.join(current_dir, '..', 'data')
     output_dir = '../data'
     print(file_name)
-    with open(f'{output_dir}/{file_name}.csv', 'w', newline='') as f:
+    with open(os.path.join(data_dir, f'{file_name}.csv'), 'w', newline='') as f:
         colnames = ['date', 'value']
         writer = csv.DictWriter(f, fieldnames=colnames)
         writer.writeheader()
