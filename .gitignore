@@ -1,2 +1,5 @@
 .env
-
+venv/
+*.swp
+*.pyc
+SGDataDownloader/__pycache__/
