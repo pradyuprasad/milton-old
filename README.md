@@ -22,6 +22,10 @@ What are the steps?
 
 - Download the data
   - What data?
+    - GDP
+      - GDP real (both seasonally adjusted and not)
+      - GDP nominal (both seasonally adjusted and not)
+      - Figure out some classification scheme
   - Singapore GDP and inflation data, I have already built a downloader for SGDataProject
   - Build MVP on that tomorrow.
   - What can I do in this that is better than SGDataProject??
