@@ -5,7 +5,7 @@ from download_dataseries import return_data_series_json
 from utils import element_to_csv_convertor, find_metadata
 from get_metadata import get_metadata
 import os
-from database_connect import insert_elements
+from database_connect import insert_elements, conn
 
 def load_aggregation_list(file_path: str) -> List[Dict]:
     """Loads the list of data aggregations from a JSON file.
@@ -119,6 +119,8 @@ def process_aggregation(aggregation: Dict) -> None:
     element_name_to_csv = generate_csv_names(aggregation['internal_name'], new_element_list, data_agg_dict)
     elements_list = list(element_name_to_csv.keys())
     map_aggregation_to_metadata(elements_list, index_to_element, element_to_index, element_name_to_csv, aggregation['internal_name'])
+    conn.sync()
+    conn.commit()
 
 def main():
     """Main function to load and process data aggregations."""
