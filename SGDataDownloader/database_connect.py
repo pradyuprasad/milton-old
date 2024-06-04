@@ -42,5 +42,3 @@ def insert_elements(file_path:str, data_type:str, seasonally_adjusted:bool, sect
     VALUES ('{file_path}', '{data_type}', {seasonally_adjusted_int}, '{sector_level}', '{country}', '{sector_name}', '{parent}', '{frequency}')''' 
     print(sql_statement)
     conn.execute(sql_statement)
-    conn.sync()
-    conn.commit()

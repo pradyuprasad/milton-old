@@ -88,11 +88,18 @@ def element_to_csv_convertor(file_name: str, element_data: Dict[str, Any]) -> No
     Returns:
         None
     """
-    frequency = "quarterly" if "GDP" in file_name or "Consumer" in file_name or "CPI" in file_name else "monthly"
+    frequency = ""
+    if "GDP" in file_name or "Unemployment" in file_name:
+        frequency = "quarterly"
+    elif "Consumer" in file_name:
+        frequency = "monthly"
+    else:
+        raise ValueError("Wrong file type provided with ", file_name)
+
+
     new_data = list(map(lambda pair: fix_pair(pair, frequency), element_data))
     current_dir = os.path.dirname(os.path.abspath(__file__))
     data_dir = os.path.join(current_dir, '..', 'data')
-    output_dir = '../data'
     print(file_name)
     with open(os.path.join(data_dir, f'{file_name}.csv'), 'w', newline='') as f:
         colnames = ['date', 'value']
@@ -177,7 +184,7 @@ def find_metadata(element_name: str, index_to_element: str, element_to_index: st
     """
     parent_CSV = find_parent_csv(element_name, index_to_element, element_to_index, element_to_CSV)
     CSV_depth = find_depth(element_to_index[element_name])
-    name_to_be_stored = element_name
+    name_to_be_stored = element_name.replace("'", "")
     Country = "Singapore"
     Source = "SingStat"
     type_of_data = ""
@@ -186,6 +193,10 @@ def find_metadata(element_name: str, index_to_element: str, element_to_index: st
             type_of_data = "Real_GDP"
         elif "Nominal" in aggregation_name or "nominal" in aggregation_name:
             type_of_data = "Nominal_GDP"
+    elif "Consumer" in aggregation_name:
+        type_of_data = "Consumer_Price_Index"
+    elif "Unemployment" in aggregation_name:
+        type_of_data = "Unemployment"
 
             
     seasonally_adjusted: bool = False
