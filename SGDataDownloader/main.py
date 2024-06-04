@@ -5,6 +5,7 @@ from download_dataseries import return_data_series_json
 from utils import element_to_csv_convertor, find_metadata
 from get_metadata import get_metadata
 import os
+from database_connect import insert_elements
 
 def load_aggregation_list(file_path: str) -> List[Dict]:
     """Loads the list of data aggregations from a JSON file.
@@ -74,7 +75,7 @@ def generate_csv_names(aggregation_name: str, new_element_list: List[str], data_
         element_to_csv_convertor(csv_name, data_agg_dict[element])
     return element_name_to_csv
 
-def map_csv_to_metadata(elements_list: List[str], index_to_element: Dict[str, str], 
+def map_aggregation_to_metadata(elements_list: List[str], index_to_element: Dict[str, str], 
                         element_to_index: Dict[str, str], element_name_to_csv: Dict[str, str], 
                         aggregation_name: str) -> None:
     """Maps CSV filenames to metadata and prints the metadata.
@@ -88,7 +89,22 @@ def map_csv_to_metadata(elements_list: List[str], index_to_element: Dict[str, st
     """
     for element in elements_list:
         meta_data = find_metadata(element, index_to_element, element_to_index, element_name_to_csv, aggregation_name)
-        print(meta_data)
+        file_path = element_name_to_csv[element]
+        data_type = meta_data["data type"]
+        seasonally_adjusted = meta_data["seasonally adjusted"]
+        sector_level = meta_data["SectorLevel"]
+        country = meta_data["Country"]
+        sector_name = element
+        parent = meta_data["parent_CSV"]
+        frequency = meta_data["frequency"]
+        insert_elements(file_path, data_type, seasonally_adjusted, sector_level, country, sector_name, parent, frequency)
+        
+
+
+
+
+
+
 
 def process_aggregation(aggregation: Dict) -> None:
     """Processes a single data aggregation.
@@ -102,7 +118,7 @@ def process_aggregation(aggregation: Dict) -> None:
     new_element_list = list(data_agg_dict.keys())
     element_name_to_csv = generate_csv_names(aggregation['internal_name'], new_element_list, data_agg_dict)
     elements_list = list(element_name_to_csv.keys())
-    map_csv_to_metadata(elements_list, index_to_element, element_to_index, element_name_to_csv, aggregation['internal_name'])
+    map_aggregation_to_metadata(elements_list, index_to_element, element_to_index, element_name_to_csv, aggregation['internal_name'])
 
 def main():
     """Main function to load and process data aggregations."""

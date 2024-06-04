@@ -186,12 +186,25 @@ def find_metadata(element_name: str, index_to_element: str, element_to_index: st
             type_of_data = "Real_GDP"
         elif "Nominal" in aggregation_name or "nominal" in aggregation_name:
             type_of_data = "Nominal_GDP"
+
+            
+    seasonally_adjusted: bool = False
+    if "adjusted" in aggregation_name or "Adjusted" in aggregation_name:
+        seasonally_adjusted = True
     
+    frequency = ""
+    if "Quarterly" in aggregation_name or "quarterly" in aggregation_name:
+        frequency = "quarterly"
+    elif "Monthly" in aggregation_name or "monthly" in aggregation_name:
+        frequency = "monthly"
+
     return {
         "parent_CSV": parent_CSV,
         "SectorLevel": CSV_depth,
         "name": name_to_be_stored, 
         "Country": Country, 
         "Source": Source,
-        "data type": type_of_data 
+        "data type": type_of_data ,
+        "seasonally adjusted": seasonally_adjusted,
+        "frequency": frequency
     }
