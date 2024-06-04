@@ -70,7 +70,19 @@ def generate_csv_names(aggregation_name: str, new_element_list: List[str], data_
     """
     element_name_to_csv = {}
     for element in new_element_list:
-        csv_name = aggregation_name.replace(' ', '_') + '_' + re.sub(r'_+', '_', element.replace(' ', '_').replace('-', ''))
+        # Clean aggregation_name
+        cleaned_aggregation_name = aggregation_name.replace(' ', '_').replace('-', '').replace("'", "")
+        cleaned_aggregation_name = re.sub(r'\(', '_', cleaned_aggregation_name)
+        cleaned_aggregation_name = re.sub(r'\)', '_', cleaned_aggregation_name)
+
+        # Clean element
+        cleaned_element = element.replace(' ', '_').replace('-', '').replace("'", "")
+        cleaned_element = re.sub(r'\(', '_', cleaned_element)
+        cleaned_element = re.sub(r'\)', '_', cleaned_element)
+
+        # Combine and replace multiple underscores
+        csv_name = cleaned_aggregation_name + '_' + cleaned_element
+        csv_name = re.sub(r'_+', '_', csv_name)
         element_name_to_csv[element] = csv_name + '.csv'
         element_to_csv_convertor(csv_name, data_agg_dict[element])
     return element_name_to_csv
@@ -94,7 +106,7 @@ def map_aggregation_to_metadata(elements_list: List[str], index_to_element: Dict
         seasonally_adjusted = meta_data["seasonally adjusted"]
         sector_level = meta_data["SectorLevel"]
         country = meta_data["Country"]
-        sector_name = element
+        sector_name = meta_data['name']
         parent = meta_data["parent_CSV"]
         frequency = meta_data["frequency"]
         insert_elements(file_path, data_type, seasonally_adjusted, sector_level, country, sector_name, parent, frequency)
