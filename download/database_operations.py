@@ -1,7 +1,7 @@
 import json
 import uuid
 import libsql_experimental as libsql # type: ignore
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
 import threading
 import os
 from .classes import DatabaseRow
@@ -9,7 +9,13 @@ from typing import Optional, Type
 import sys
 
 # Load environment variables
-load_dotenv()
+env_path = find_dotenv()
+load_dotenv(env_path)
+print(env_path)
+for key, value in os.environ.items():
+    print(f"{key}: {value}")
+
+
 DB_URL = os.getenv("TURSO_DB_URL")
 DB_TOKEN = os.getenv("TURSO_DB_TOKEN")
 
