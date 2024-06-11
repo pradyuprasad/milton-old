@@ -42,7 +42,7 @@ def main() -> None:
     current_dir:str = os.path.dirname(os.path.abspath(__file__))
     file_path:str = os.path.join(current_dir, 'aggregations_list.json')
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    data_dir = os.path.join(current_dir, '..','data')
+    data_dir = os.path.join(current_dir, '..', '..','data')
 
     
 
