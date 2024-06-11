@@ -1,7 +1,7 @@
 import requests
-from typing import *
+from .classes import RawMetaData, ProcessedMetaData
 
-def get_metadata(series_id:str) -> Dict:
+def get_metadata(series_id:str) ->  ProcessedMetaData:
     '''
     Downloads data series from singstat API. returns entire series as json
     '''
@@ -14,4 +14,17 @@ def get_metadata(series_id:str) -> Dict:
 
     response = requests.get(url, headers=headers)
     response.raise_for_status()
-    return response.json()
+    output: RawMetaData = RawMetaData(**response.json())
+    return process_metadata(output)
+
+def process_metadata(raw: RawMetaData) -> ProcessedMetaData:
+    processed_data = ProcessedMetaData(
+        Data=ProcessedMetaData.MetaDataDetails(
+            **raw.Data
+        ),
+        DataCount=raw.DataCount,
+        StatusCode=raw.StatusCode,
+        Message=raw.Message
+    )
+    return processed_data
+ 
