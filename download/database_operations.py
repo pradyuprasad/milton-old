@@ -136,6 +136,5 @@ def insert_database_row(row: DatabaseRow) -> None:
         
 
 if __name__ == "__main__":
-    print()
     drop_datasets()
     make_dataset_table()
