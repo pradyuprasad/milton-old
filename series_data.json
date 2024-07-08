@@ -1,0 +1,74 @@
+[
+    {
+        "title": "10-Year Treasury Constant Maturity Minus 2-Year Treasury Constant Maturity",
+        "id": "T10Y2Y"
+    },
+    {
+        "title": "30-Year Fixed Rate Mortgage Average in the United States",
+        "id": "MORTGAGE30US"
+    },
+    {
+        "title": "Federal Funds Effective Rate",
+        "id": "FEDFUNDS"
+    },
+    {
+        "title": "M2",
+        "id": "M2SL"
+    },
+    {
+        "title": "Overnight Reverse Repurchase Agreements: Treasury Securities Sold by the Federal Reserve in the Temporary Open Market Operations",
+        "id": "RRPONTSYD"
+    },
+    {
+        "title": "Consumer Price Index for All Urban Consumers: All Items in U.S. City Average",
+        "id": "CPIAUCSL"
+    },
+    {
+        "title": "Unemployment Rate",
+        "id": "UNRATE"
+    },
+    {
+        "title": "Assets: Total Assets: Total Assets (Less Eliminations from Consolidation): Wednesday Level",
+        "id": "WALCL"
+    },
+    {
+        "title": "10-Year Treasury Constant Maturity Minus 3-Month Treasury Constant Maturity",
+        "id": "T10Y3M"
+    },
+    {
+        "title": "Gross Domestic Product",
+        "id": "GDP"
+    },
+    {
+        "title": "Real Gross Domestic Product",
+        "id": "GDPC1"
+    },
+    {
+        "title": "Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity, Quoted on an Investment Basis",
+        "id": "DGS10"
+    },
+    {
+        "title": "ICE BofA US High Yield Index Option-Adjusted Spread",
+        "id": "BAMLH0A0HYM2"
+    },
+    {
+        "title": "Median Sales Price of Houses Sold for the United States",
+        "id": "MSPUS"
+    },
+    {
+        "title": "S&P CoreLogic Case-Shiller U.S. National Home Price Index",
+        "id": "CSUSHPINSA"
+    },
+    {
+        "title": "10-Year Breakeven Inflation Rate",
+        "id": "T10YIE"
+    },
+    {
+        "title": "Inflation, consumer prices for the United States",
+        "id": "FPCPITOTLZGUSA"
+    },
+    {
+        "title": "M1",
+        "id": "M1SL"
+    }
+]

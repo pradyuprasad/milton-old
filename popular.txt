@@ -1,0 +1,2757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+                <title>Economic Data Series by Tag | FRED | St. Louis Fed</title>
+              <script>
+      dataLayer = []
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []
+      w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      })
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''
+      j.async = true
+      j.src =
+        '//www.googletagmanager.com/gtm.js?id=' + i + dl
+      f.parentNode.insertBefore(j, f)
+    })(window, document, 'script', 'dataLayer', 'GTM-5L322W')</script>
+    <!-- End Google Tag Manager -->
+
+        <meta name="description" content="824,239 economic data series by tag. FRED: Download, graph, and track economic data.">
+            <meta name="keywords" content="Economic Data, FRED, St. Louis Fed, Federal Reserve">
+    
+
+        
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "DataCatalog",
+        "license": "",
+        "name": "FRED",
+        "alternateName": "Federal Reserve Economic Data",
+        "url": "https://fred.stlouisfed.org/tags/series",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Federal Reserve Bank of St. Louis",
+            "url": "https://www.stlouisfed.org/",
+            "address": {
+              "@type": "PostalAddress",
+                "addressLocality": "St. Louis",
+                "addressRegion": "MO",
+                "postalCode": "63102",
+                "streetAddress": "Federal Reserve Bank Plaza, 1 Broadway",
+                "addressCountry": "USA"
+            },
+             "department": "Research Division",
+             "email": "fred@stlouisfed.org",
+             "telephone": "(314) 444-3733"                  
+        }             
+    }
+
+
+    </script>
+        
+    <link rel="preconnect" href="https://research.stlouisfed.org">
+    <link rel="preconnect" href="https://uapi.stlouisfed.org">
+    <link rel="preconnect" href="https://alfred.stlouisfed.org">
+    <link rel="preconnect" href="https://fred.stlouisfed.org">
+    <link rel="preconnect" href="https://fred.stlouisfed.org">
+    <link rel="preconnect" href="https://apis.google.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <meta name="apple-itunes-app" content="app-id=451715489">
+    <meta name="google-play-app" content="app-id=org.stlouisfed.research.fred">
+
+    
+    
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+
+    <!--<meta name="viewport" content="width=device-width">-->
+
+        <link rel="canonical" href="https://fred.stlouisfed.org/tags/series">
+    
+    
+
+</head>
+<body class="series-pager">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5L322W"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- pingdom_uptime_check=uXCPjTUzTxL7ULra -->
+<link rel="stylesheet" type="text/css" href=/assets/bootstrap/dist/css/1713537010.bootstrap.min.css>
+<script></script>
+<link rel="stylesheet" type="text/css" href=/css/1719514932.pager.min.css>
+<script></script>
+<link rel="stylesheet" type="text/css" href=/assets/fontawesome-free/css/all.min.css>
+<link rel="stylesheet" type="text/css" href=/assets/select2/dist/css/1686149267.select2.min.css>
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+<!--googleoff: snippet-->
+<a href="#content-container" class="skip-to">Skip to main content</a>
+<!--googleon: snippet-->
+<a name="top" id="top"></a>
+<div id="container" class="container">
+    <header style="display:block;height:auto;background:inherit;">
+        <h1 class="visually-hidden">Federal Reserve Economic Data: Your trusted data source since 1991</h1>
+        <nav class="navbar navbar-expand-lg header-not-home py-0 EL-nonhomepage-header EL-header-and-subheader">
+            <div id="hidden-user" class='hide'></div>
+            <div id="action-modal"></div>
+            <div class="container-fluid align-items-stretch gx-0">
+                <div class="col-3" style="padding-left: 15px; padding-right: 15px;">
+                    <a class="research-logo-gtm" target="_" href="https://www.stlouisfed.org">
+                        <img class="header-logo-eagle d-none d-lg-block" src="//fred.stlouisfed.org/images/masthead.svg" alt="Federal Reserve bank of St. Louis logo">
+                        <img class="header-logo-eagle d-lg-none" src="//fred.stlouisfed.org/images/logo-eagle.png" alt="Eagle Logo">
+                    </a>
+                </div>
+                <div class="fred-logo-div col-6 d-lg-none">
+                    <a class="fred-logo-gtm" href="//fred.stlouisfed.org/">
+                        <picture>
+                            <img class="header-logo" src="//fred.stlouisfed.org/images/fred-masthead-mobile-2x.png" alt="mini fred logo">
+                        </picture>
+                    </a>
+                </div>
+                <div class="col-lg-8 col-3 d-flex justify-content-end" style="padding-left: 15px; padding-right: 0px;">
+                    <nav id="blueheader-navbar-nav" style="height:100%">
+                        <ul id="blueheader-navbar" class="nav float-end">
+                            <li class="blueheader-navbar-item center-content-vertically d-none d-lg-block">
+                                <span id="research-resources-popover-container" class="research-resources-dropdown-gtm header-popover research-resources-popover-container">
+    <span id="research-resources-link" data-toggle="popover" class="align-icon" tabindex="0" style="cursor: pointer">Economic Research Resources
+        <i class="fas fa-angle-down fa-lg header-icon-padding" alt="Open Research Resources Menu Icon"></i>
+    </span>
+</span>
+
+<div class="hide">
+    <div id="research-resources-popover">
+        <div class="container research-resources" style="padding: 7px 25px 0px 25px;">
+            <div class="row">
+                <div class="col-7 research-resources-left-column">
+                    <div class="research-resources-text">Explore resources provided by the Research Division at the Federal Reserve Bank of St. Louis</div>
+                    <div>
+                        <a rel="noopener" target="_blank" class="errd-research-link-gtm" href="https://research.stlouisfed.org" style="color: #364E71; font-family: Roboto; font-weight: 700px">research.stlouisfed.org <i class="fas fa-external-link-alt" aria-hidden="true" style="font-size: 12px"></i></a>
+                    </div>
+                </div>
+                <div class="col-5 research-resources-right-column">
+                    <ul class="header-list-popover list-group flush-list">
+                        <li class="list-group-item">
+                            <a rel="noopener" target="_blank" class="errd-research-news-gtm" href="https://research.stlouisfed.org/publications/research-news/">Research News</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a rel="noopener" target="_blank" class="errd-economists-gtm" href="https://research.stlouisfed.org/econ/">Economists</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a rel="noopener" target="_blank" class="errd-publications-gtm"  href="https://research.stlouisfed.org/publications/">Publications</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a rel="noopener" target="_blank" class="errd-working-papers-gtm" href="https://research.stlouisfed.org/wp/">Working Papers</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a rel="noopener" target="_blank" class="errd-info-services-gtm" href="https://research.stlouisfed.org/info-services.html">Information Services</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>                            </li>
+                            <li class="blueheader-navbar-item center-content-vertically d-none d-lg-block">
+                                <span id="switchprod-popover-container" class="Switch-Products-gtm header-popover switchprod-popover-container">
+  <span id="switchProd" data-toggle="popover" data-toggle="popover" class="align-icon" tabindex="0" style="cursor: pointer"> Switch Products
+    <i class="fas fa-angle-down fa-lg header-icon-padding" alt="Open Switch Products Menu Icon"></i>
+  </span>
+</span>
+
+<div class="hide">
+  <div id="switchprod-popover">
+    <ul id="switch-prod-list" class="list-group switch-products-list" role="menu" aria-labelledby="switchProduct">
+    <li id="ham-fred-dev" class="list-group-item product-fred">
+        <a class="d-flex burger-fred-gtm" role="menuitem" href="//fred.stlouisfed.org">
+            <span class="w-100 fred-ultra-selected fred-ultra burger-fred-gtm">FRED</span>
+            <span class="flex-shrink-1 float-end switch-icon-padding burger-fred-gtm"><img src="//fred.stlouisfed.org/images/favicon.ico" width="16" height="16"></span>
+        </a>
+      </li>
+      <li id="ham-alfred" class="hover-nav list-group-item">
+          <a rel="noopener" target="_blank" class="d-flex burger-alfred-gtm" role="menuitem" href="//alfred.stlouisfed.org">
+            <span class="fred-thin burger-alfred-gtm">AL</span>
+            <span class="w-100 fred-ultra burger-alfred-gtm">FRED</span>
+            <span class="flex-shrink-1 float-end switch-icon-padding burger-alfred-gtm"><div style="width: 16px; height: 16px; background-color: #364e71; border-radius: 2px;"></div></span>
+        </a>
+      </li>
+      <li id="ham-fraser" class="hover-nav list-group-item">
+          <a rel="noopener" target="_blank" class="d-flex burger-fraser-gtm" role="menuitem" href="https://fraser.stlouisfed.org/">
+            <span class="w-100 fred-ultra burger-fraser-gtm">FRASER</span>
+            <span class="flex-shrink-1 float-end switch-icon-padding burger-fraser-gtm"><div style="width: 16px; height: 16px; background-color: #364e71; border-radius: 2px;"></div></span>
+        </a>
+      </li>
+      <li id="ham-ecolowdown" class="hover-nav-econ hover-nav list-group-item">
+          <a rel="noopener" target="_blank" class="d-flex burger-econlowdown-gtm" role="menuitem" href="https://www.econlowdown.org/">
+            <span class="w-100 fred-ultra-econ burger-econlowdown-gtm">ECON<br>LOWDOWN</span>
+              <span class="flex-shrink-1 float-end burger-econlowdown-gtm" style="padding-top: 15px"><div style="width: 16px; height: 16px; background-color: #364e71; border-radius: 2px;"></div></span>
+        </a>
+    </li>
+</ul>
+  </div>
+</div>                            </li>
+                            <li class="blueheader-navbar-item center-content-vertically d-none d-lg-block">
+                                <div class="hidden-xs" id="signin-wrap">
+                                    <div id="user-nav" class="EL-my-account-link"></div>
+                                </div>
+                            </li>
+                            <li class="blueheader-navbar-item center-content-vertically d-lg-none">
+                                <a class="hamburger-popover-container header-popover hamburger-gtm" href="#">
+    <i id="hamburger" data-toggle="popover" class="fas fa-bars hamburger-header" alt="Open Mobile Hamburger Menu"></i>
+</a>
+
+<div class="hide">
+    <div id="hamburger-popover">
+        <div class="hamburger-search-padding">
+            <div class='input-group'>
+                <input type="text" class="form-control search-input nav-search" placeholder="Search FRED data...">
+                <button class="btn search-submit nav-search-button" type="submit">
+                    <i class="fa fa-search" alt="Submit Mobile Hamburger Search"></i>
+                </button>
+            </div>
+        </div>
+        <div id="hamburger-navigation">
+            <div id="hamburger-home">
+                <ul class="list-group flush-list hamburger-list col-12" style="padding-bottom: 20px;">
+                    <li class="list-group-item">
+                        <a class="burger-calendar-gtm" href="https://fred.stlouisfed.org/releases/calendar">Release Calendar</a>
+                    </li>
+                    <li class="list-group-item hamburger-menu-item" onclick="hamburgerMenuNavigation('hamburger-tools')">
+                        <a class="burger-tools-gtm" href="#">FRED Tools
+                            <i class="fas fa-angle-right hamburger-nxt-page-icon" alt="FRED Tools Hamburger Submenu Icon"></i>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="burger-blog-gtm" href="https://fredblog.stlouisfed.org">FRED Blog</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="burger-news-gtm" href="https://news.research.stlouisfed.org/category/fred-announcements/">FRED News</a>
+                    </li>
+                    <li class="list-group-item hamburger-menu-item" onclick="hamburgerMenuNavigation('hamburger-about-fred')">
+                        <a class="burger-about-gtm" href="#">About FRED
+                            <i class="fas fa-angle-right hamburger-nxt-page-icon" alt="About FRED Hamburger Submenu Icon"></i>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="burger-myaccount-gtm" href="https://fredaccount.stlouisfed.org">My Account</a>
+                    </li>
+                </ul>
+                <ul class="list-group flush-list hamburger-list col-12" style="padding-bottom: 0px;">
+                    <li class="list-group-item hamburger-menu-item" onclick="hamburgerMenuNavigation('hamburger-products')">
+                        <a class="burger-switch-gtm" href="#">
+                            Switch Products<i class="fas fa-angle-right hamburger-nxt-page-icon" alt="Switch Products Hamburger Submenu Icon"></i>
+                        </a>
+                    </li>
+                    <li class="list-group-item hamburger-menu-item" onclick="hamburgerMenuNavigation('hamburger-research')">
+                        <a class="burger-resources-gtm" href="#">
+                            Economic Research Resources<i class="fas fa-angle-right hamburger-nxt-page-icon" alt="Economic Research Resources Hamburger Submenu Icon"></i>
+                        </a>
+                        <p>Explore resources provided by the Research Division at the Federal Reserve Bank of St. Louis.</p>
+                    </li>
+                </ui>
+            </div>
+            
+            <div id="hamburger-about-fred" class="hide">
+                <ul class="list-group hamburger-submenu-list col-12">
+                    <li class="list-group-item hamburger-menu-item" onclick="hamburgerMenuNavigation('hamburger-home')">
+                        <i class="fas fa-angle-left hamburger-previous-page-icon" alt="Return to Mobile/Hamburger Main Menu Icon"></i>
+                        About FRED
+                    </li>
+                    <li class="list-group-item">
+                        <a class="burger-fred-about-gtm" href="https://fredhelp.stlouisfed.org/fred/about/about-fred/what-is-fred/"> What is FRED</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="burger-tutorials-gtm" href="https://fredhelp.stlouisfed.org"> Tutorials</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="burger-data-literacy-gtm" href="https://www.stlouisfed.org/education/digital-badges/fred-data-practitioner">
+                        Data Literacy
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="burger-contact-us-gtm" href="https://fred.stlouisfed.org/contactus/"> Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div id="hamburger-tools" class="hide">
+                <ul class="list-group hamburger-submenu-list col-12">
+                    <li class="list-group-item hamburger-menu-item" onclick="hamburgerMenuNavigation('hamburger-home')">
+                            <i class="fas fa-angle-left hamburger-previous-page-icon" alt="Return to Mobile/Hamburger Main Menu Icon"></i>
+                            FRED Tools
+                    </li>
+                    <li class="list-group-item">
+                        <a class="burger-fred-excel-add-in-gtm" href="https://fred.stlouisfed.org/fred-addin"> FRED Add-in for Excel</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="burger-fred-api-gtm" href="https://fred.stlouisfed.org/docs/api/fred"> FRED API</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="burger-fred-mobile-apps-gtm" href="https://fred.stlouisfed.org/fred-mobile"> FRED Mobile Apps</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div id="hamburger-research" class="hide">
+                <ul class="list-group hamburger-submenu-list col-12">
+                    <li class="list-group-item hamburger-menu-item" onclick="hamburgerMenuNavigation('hamburger-home')">
+                        <span>
+                            <i class="fas fa-angle-left hamburger-previous-page-icon" alt="Return to Mobile/Hamburger Main Menu Icon"></i>
+                            Economic Research Resources
+                        </span>
+                    </li>
+                    <li class="list-group-item">
+                        <a rel="noopener" target="_blank" class="burger-research-news-gtm" href="https://research.stlouisfed.org/publications/research-news"> Research News</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a rel="noopener" target="_blank" class="burger-economists-gtm" href="https://research.stlouisfed.org/econ/"> Economists</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a rel="noopener" target="_blank" class="burger-publications-gtm" href="https://research.stlouisfed.org/publications/"> Publications</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a rel="noopener" target="_blank" class="burger-working-papers-gtm" href="https://research.stlouisfed.org/wp/"> Working Papers</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a rel="noopener" target="_blank" class="burger-info-services-gtm" href="https://research.stlouisfed.org/info-services.html"> Information Services</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div id="hamburger-products" class="hide">
+                <ul class="list-group hamburger-submenu-list col-12" style="padding-bottom: 0px !important">
+                    <li class="list-group-item hamburger-menu-item" onclick="hamburgerMenuNavigation('hamburger-home')">
+                            <i class="fas fa-angle-left hamburger-previous-page-icon" alt="Return to Mobile/Hamburger Main Menu Icon"></i>
+                            Switch Products
+                    </li>
+                </ul>
+                <ul id="switch-prod-list" class="list-group switch-products-list" role="menu" aria-labelledby="switchProduct">
+    <li id="ham-fred-dev" class="list-group-item product-fred">
+        <a class="d-flex burger-fred-gtm" role="menuitem" href="//fred.stlouisfed.org">
+            <span class="w-100 fred-ultra-selected fred-ultra burger-fred-gtm">FRED</span>
+            <span class="flex-shrink-1 float-end switch-icon-padding burger-fred-gtm"><img src="//fred.stlouisfed.org/images/favicon.ico" width="16" height="16"></span>
+        </a>
+      </li>
+      <li id="ham-alfred" class="hover-nav list-group-item">
+          <a rel="noopener" target="_blank" class="d-flex burger-alfred-gtm" role="menuitem" href="//alfred.stlouisfed.org">
+            <span class="fred-thin burger-alfred-gtm">AL</span>
+            <span class="w-100 fred-ultra burger-alfred-gtm">FRED</span>
+            <span class="flex-shrink-1 float-end switch-icon-padding burger-alfred-gtm"><div style="width: 16px; height: 16px; background-color: #364e71; border-radius: 2px;"></div></span>
+        </a>
+      </li>
+      <li id="ham-fraser" class="hover-nav list-group-item">
+          <a rel="noopener" target="_blank" class="d-flex burger-fraser-gtm" role="menuitem" href="https://fraser.stlouisfed.org/">
+            <span class="w-100 fred-ultra burger-fraser-gtm">FRASER</span>
+            <span class="flex-shrink-1 float-end switch-icon-padding burger-fraser-gtm"><div style="width: 16px; height: 16px; background-color: #364e71; border-radius: 2px;"></div></span>
+        </a>
+      </li>
+      <li id="ham-ecolowdown" class="hover-nav-econ hover-nav list-group-item">
+          <a rel="noopener" target="_blank" class="d-flex burger-econlowdown-gtm" role="menuitem" href="https://www.econlowdown.org/">
+            <span class="w-100 fred-ultra-econ burger-econlowdown-gtm">ECON<br>LOWDOWN</span>
+              <span class="flex-shrink-1 float-end burger-econlowdown-gtm" style="padding-top: 15px"><div style="width: 16px; height: 16px; background-color: #364e71; border-radius: 2px;"></div></span>
+        </a>
+    </li>
+</ul>
+            </div>
+        </div>
+    </div>
+</div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        <div id="notifications-container"></div>
+    </nav>
+    <div class='navbar navbar-expand-lg sub-header EL-header-and-subheader'>
+        <div class="container-fluid gx-0">
+            <div class="col-lg-3 col-md-3 d-none d-lg-block" style="padding-left: 15px; padding-right: 15px;" >
+                <a class="fred-logo-gtm" href="//fred.stlouisfed.org/">
+                        <img id="fred-logo-subheader" src="//fred.stlouisfed.org/images/fred-logo-2x.png" alt="FRED Economic Data, St. Louis FED">
+                </a>
+            </div>
+            <h1 class="col-lg-2 fred-trust-text d-none d-xl-block d-flex align-self-center" role="presentation" style="padding: 45px 0px 45px; margin-left: -1px; font-weight:400">
+                <p class="mb-0">Your trusted data source</p> <p>since 1991.</p>
+            </h1>
+            <div class="col d-flex justify-content-end" style="padding-left: 15px; padding-right: 15px;">
+                <div class="container-fluid gx-0">
+                    <div class="search-header-div float-end col-8 d-none d-lg-block">
+                        <div class='input-group EL-header-search-container' id="search-container-header">
+                            <select id="head-search" class='EL-header-search' style="
+                                border-radius: 25px 0 0 25px;
+                                background-color: #5e88a2;
+                                border-right: 0;
+                                color: #fff;
+                                font-family: Roboto,sans-serif;
+                                border: none;
+                                height: 45px;
+                            ">
+                                <option></option>
+                            </select>
+                            <input type="hidden" name="st" class="search-text-input">
+                            <button class="btn search-submit-select2" id="select2-nav-search-button" aria-label="search" type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <nav class="row col-12 navbar EL-main-nav navbar-expand-sm d-none d-lg-flex" id="subheader-nav" role="navigation">
+    <div class="navbar-padding navbar-collapse collapse d-flex justify-content-end">
+        <ul id="subheader-navbar" class="nav float-end navbar-nav">
+            <li class="nav-li-subheader">
+                <a href="https://fred.stlouisfed.org/releases/calendar" class="nav-releasecal-subheader-gtm">Release Calendar</a>
+            </li>
+            <li class="nav-li-subheader">
+              <span class="sub-header-nav-tools-gtm  header-popover fred-tools-container" tabindex="0" aria-labelledby="fred-tools-link">
+  <span id="fred-tools-link" data-toggle="popover" class="align-icon">FRED Tools
+    <i class="fas fa-angle-down header-icon-padding" alt="Open FRED Tools Menu Icon"></i>
+  </span>
+</span>
+
+<div class="hide">
+  <div id="fred-tools-popover">
+    <ul class="header-list-popover list-group flush-list">
+      <li class="list-group-item">
+        <a class="homepage-nav-tools-fred-excel-addin-gtm" href="https://fred.stlouisfed.org/fred-addin">FRED Add-in for Excel</a>
+      </li>
+      <li class="list-group-item">
+        <a class="homepage-nav-tools-fred-api-gtm" href="https://fred.stlouisfed.org/docs/api/fred">FRED API</a>
+      </li>
+      <li class="list-group-item">
+        <a class="homepage-nav-tools-fred-mobile-gtm" href="https://fred.stlouisfed.org/fred-mobile">FRED Mobile Apps</a>
+      </li>
+    </ul>
+  </div>
+</div>            </li>
+            <li class="nav-li-subheader">
+                <a href="https://news.research.stlouisfed.org/category/fred-announcements/" class="nav-news-subheader-gtm">FRED News</a>
+            </li>
+            <li class="nav-li-subheader">
+                <a href="https://fredblog.stlouisfed.org/" class="nav-fredblog-subheader-gtm">FRED Blog</a>
+            </li>
+            <li class="nav-li-subheader">
+              
+<span class="subheader-nav-about-gtm header-popover about-fred-container" tabindex="0" aria-labelledby="about-fred-link">
+  <span id="about-fred-link" data-toggle="popover" class="align-icon">About FRED
+    <i class="fas fa-angle-down header-icon-padding" alt="Open About FRED Menu Icon"></i>
+  </span>
+</span>
+
+<div class="hide">
+  <div id="about-fred-popover">
+      <ul class="header-list-popover list-group flush-list">
+        <li class="list-group-item">
+          <a class="about-fred-what-is-gtm" href="https://fredhelp.stlouisfed.org/fred/about/about-fred/what-is-fred/">
+            What is FRED
+          </a>
+        </li>
+        <li class="list-group-item">
+          <a class="about-fred-tutorials-gtm" href="https://fredhelp.stlouisfed.org">
+            Tutorials
+          </a>
+        </li>
+        <li class="list-group-item">
+          <a class="about-research-data-literacy-gtm" href="https://www.stlouisfed.org/education/digital-badges/fred-data-practitioner">
+            Data Literacy
+          </a>
+        </li>
+        <li class="list-group-item">
+          <a class="about-fred-contact-gtm" href="https://fred.stlouisfed.org/contactus/ ">
+            Contact Us
+          </a>
+        </li>
+      </ul>
+  </div>
+</div>
+            </li>
+        </ul>
+    </div>
+</nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>
+  <div class="clear row gx-0" id="content-container">
+
+
+
+
+
+<div id="sidebar-div" class="col-sm-3 content-2columns-left hidden-xs" tabindex="-1">
+    <a id="skipToMainContentLink" class="skip-to" href="#releaseContentContainer" tabindex="-1">Skip to main content</a>
+    
+    <div class="d-none d-sm-block">
+    <div class="d-none d-sm-block sidebar-filters">
+
+<form method="GET" name="search_tags" style="display:inline" id="tags-related-search-form">
+        <input type="hidden" name="t" value="">
+        <input type="hidden" name="et" value="">
+      
+    <input type="hidden" name="ptic" value="824239">    
+    <input type="hidden" name="ob" value="pv">
+    <input type="hidden" name="od" value="desc">
+    <input type="hidden" name="tg" value="" id="tg">   
+    <div id="tag-search-container" class="hidden">
+    <input type="text" name="tt" value="" id="tag-search" autocomplete="off" title="Search Tags" class="hidden js-placeholder">
+    <button type="submit" name="search_tags" id="tag-search-button"> </button>
+    </div> 
+</form>
+<div id="tags-sidebar-container">
+<h2 id="sidebar-filter-by" tabindex="0" class="list-group-header header-big hidden panel-filter-header">Filter by:</h2>
+<div class="panel panel-primary panel-border top mt30 hidden panel-group-default">
+  <div class="panel-body bg-light p10">
+    <div class="list-group list-group-links list-group-spacing-xs mbn">
+        <div class="list-group-header row">
+            <h3 tabindex="0" class="group-tag-name mb-1 col-8"></h3>
+            <span class="float-end col-4 tags-view-all"><a href="#" class="text-muted pe-2 view-all-tags view-all-tags-gtm hidden" data-bs-toggle="modal" data-tilte="test" data-bs-target="#viewallModal" data-group="gen" >View All</a></span>
+        <input type="hidden" name="tg-geo" value="geo" id="tg-geo">
+      </div>
+       <div class="group-tag-list"></div>
+    </div>
+</div>
+</div>
+
+<div id="related-tags" class="old-tags-menu tag-tooltip-selector">
+</div>
+</div>
+ <div class="modal fade viewallModal" tabindex="-1" role="dialog" id="viewallModal">
+  <div class="modal-dialog viewallModalDialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+          <h4 class="modal-title">Filter by ""</h4>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="font-size: 26px !important;"><span style="color: #d6d6d6 !important;" aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+<div class="row">
+  <div class="btn-toolbar alpha">
+    <div class="btn-group btn-group-sm alphabet">
+      <button class="btn btn-default first filter-tag-letter-gtm">A</button>
+      <button class="btn btn-default filter-tag-letter-gtm">B</button>
+      <button class="btn btn-default filter-tag-letter-gtm">C</button>
+      <button class="btn btn-default filter-tag-letter-gtm">D</button>
+      <button class="btn btn-default filter-tag-letter-gtm">E</button>
+      <button class="btn btn-default filter-tag-letter-gtm">F</button>
+      <button class="btn btn-default filter-tag-letter-gtm">G</button>
+      <button class="btn btn-default filter-tag-letter-gtm">H</button>
+      <button class="btn btn-default filter-tag-letter-gtm">I</button>
+      <button class="btn btn-default filter-tag-letter-gtm">J</button>
+      <button class="btn btn-default filter-tag-letter-gtm">K</button>
+      <button class="btn btn-default filter-tag-letter-gtm">L</button>
+      <button class="btn btn-default filter-tag-letter-gtm">M</button>
+      <button class="btn btn-default filter-tag-letter-gtm">N</button>
+      <button class="btn btn-default filter-tag-letter-gtm">O</button>
+      <button class="btn btn-default filter-tag-letter-gtm">P</button>
+      <button class="btn btn-default filter-tag-letter-gtm">Q</button>
+      <button class="btn btn-default filter-tag-letter-gtm">R</button>
+      <button class="btn btn-default filter-tag-letter-gtm">S</button>
+      <button class="btn btn-default filter-tag-letter-gtm">T</button>
+      <button class="btn btn-default filter-tag-letter-gtm">U</button>
+      <button class="btn btn-default filter-tag-letter-gtm">V</button>
+      <button class="btn btn-default filter-tag-letter-gtm">W</button>
+      <button class="btn btn-default filter-tag-letter-gtm">X</button>
+      <button class="btn btn-default filter-tag-letter-gtm">Y</button>
+      <button class="btn btn-default filter-tag-letter-gtm">Z</button>
+      <button class="btn btn-default filter-tag-letter-gtm last">#</button>      
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="form-group float-end pr10 mt10">
+      <form method="GET" name="search_tags" style="display:inline" id="tags-related-search-form">
+                    <input type="hidden" name="t" value="">
+                    <input type="hidden" name="et" value="">
+            
+          <input type="hidden" name="ptic" value="824239">    
+          <input type="hidden" name="ob" value="pv">
+          <input type="hidden" name="od" value="desc">
+          <input type="hidden" name="tg" value="" id="tg">   
+          <div class="input-group tagsFilterSearch float-end">
+            <div class="form-group has-feedback has-clear">
+              <input type="text" class="form-control" id="tag-search-view-all" placeholder="Find Filters..." value="" name="tt" autocomplete="off" title="Search Tags">
+              <span class="form-control-clear fa fa-times form-control-feedback d-none"></span>
+            </div>
+          </div>
+
+      </form>
+  </div>
+</div>
+<div class="row section modal-tag-list">
+          </div>
+</div>
+      <div class="modal-footer viewallModalFooter">
+        <button type="button" class="btn btn-default viewallFooterButton" data-bs-dismiss="modal">Cancel</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+  
+</div>
+
+    </div>
+
+        <h2 id="sidebar-need-help" tabindex="0">Need Help?</h2>
+    <ul class="list-bullets">
+        <li><a id="sidebar-learn-abt-tags" class="need-help" href="https://fredhelp.stlouisfed.org/fred/data/finding-data/freds-tags/">Learn about Tags</a></li>
+        <li><a id="sidebar-tutorials" class="need-help" href="https://fredhelp.stlouisfed.org">Tutorials</a></li>
+        <li><a id="sidebar-faq" class="need-help" href="https://fredhelp.stlouisfed.org/#fred-faq-frequently-asked-questions" aria-label="Frequently asked questions">FAQs</a></li>
+        <li><a id="sidebar-email-us" class="need-help" href="https://fred.stlouisfed.org/contactus/">Email Us</a></li>
+    </ul>
+</div>
+
+
+
+<div class="col-12 col-sm-9 content-2columns-main gx-4">
+                    <!--<link rel="stylesheet" type="text/css" href=/assets/bootstrap/dist/css/1713537010.bootstrap.min.css>
+        <link rel="stylesheet" type="text/css" href=/css/1719514932.main.css>
+        -->
+                        <nav id="breadcrumbs" class="site-breadcrumbs" aria-label="site breadcrumbs">
+            <a class="breadcrumb_link" href="/tags">Tags</a>
+        </nav>
+                                        
+                        <div id="page-title" class="page-title">
+            <h2>824,239 Series</h2>
+
+
+        </div>
+                
+                <div class="pager-container">
+    <header>
+        <div class="drawer-dropdown-wrapper">
+            <nav class="drawer-dropdown">
+                <h2>Filters</h2>
+                <a href="#0" class="drawer-close">Close</a>
+                <ul class="drawer-dropdown-content">
+                
+                <!-- Sort Dropdown -->
+                <li class="has-children">
+                    <a href="#"><span class="float-start">Sort by: </span><span id="sort-by-text" class="float-end smaller text-muted">Popularity</span></a>
+                        <ul class="drawer-secondary-dropdown is-hidden" id="order_by_options-dropdown">
+                            <li class="go-back"><a href="#0">Back</a></li>
+                            <li class="has-children-no">
+                                <a href="" class="list-group-item" data-order-by="pv"> <span class="float-start">Popularity </span>
+                                    <b class="float-end"><span class="tag-count sort-checked sort-checked-pv"></span></b>
+                                </a>
+                            </li>
+                            <li class="has-children-no">
+                            <a href="#" class="list-group-item" data-order-by="lu"> <span class="float-start">Updated </span>
+                                <b class="float-end"><span class="tag-count sort-checked sort-checked-lu"> </span></b>
+                            </a>
+                            </li>                            
+                            <li class="has-children-no">
+                                <a href="#" class="list-group-item" data-order-by="oe"> <span class="float-start"> Obs End</span>
+                                    <b class="float-end"><span class="tag-count sort-checked sort-checked-oe"> </span></b>
+                                </a>
+                            </li>
+                           <li class="has-children-no">
+                                <a href="#" class="list-group-item" data-order-by="os"> <span class="float-start"> Obs Start</span>
+                                    <b class="float-end"><span class="tag-count sort-checked sort-checked-os"> </span></b>
+                                </a>
+                            </li>
+                           <li class="has-children-no">
+                                <a href="#" class="list-group-item" data-order-by="t"> <span class="float-start"> Title</span>
+                                    <b class="float-end"><span class="tag-count sort-checked sort-checked-t"> </span></b>
+                                </a>
+                            </li>
+                           <li class="has-children-no">
+                                <a href="#" class="list-group-item" data-order-by="f"> <span class="float-start"> Frequency</span>
+                                    <b class="float-end"><span class="tag-count sort-checked sort-checked-f"> </span></b>
+                                </a>
+                            </li>
+                           <li class="has-children-no">
+                                <a href="#" class="list-group-item" data-order-by="u"> <span class="float-start"> Units</span>
+                                    <b class="float-end"><span class="tag-count sort-checked sort-checked-u"> </span></b>
+                                </a>
+                            </li>
+                           <li class="has-children-no">
+                                <a href="#" class="list-group-item" data-order-by="sa"> <span class="float-start"> Seas Adj</span>
+                                    <b class="float-end"><span class="tag-count sort-checked sort-checked-sa"> </span></b>
+                                </a>
+                            </li>
+
+                        </ul>
+                </li>
+                <!-- Selected Tags -->
+                                
+
+                <li class="drawer-divider browse-filters-seperator">Browse Filters</li>
+
+                <li class="has-children tag-drawer-group-item hidden">
+                <a class="group-tag-name" href="#">Group 1</a>
+                    <ul class="drawer-secondary-dropdown is-hidden">
+                        <li class="go-back"><a href="#0">Back</a></li>
+
+                        <li class="see-all has-children"><a class="group-tag-name-all" data-group="" href="#">View All Group</a>
+                            <ul class="drawer-secondary-dropdown is-hidden view-all-group">
+                                <li class="go-back"><a href="#0">Back</a></li>
+                                <li><a href="" class="list-group-item"> <span class="float-start">Loading Filters</span><b class="float-end"><span class="tag-count"></span></b></a></li>
+                            </ul>
+                        </li>
+
+                    </ul> <!-- .drawer-secondary-dropdown -->
+                </li> <!-- .has-children -->
+
+                <li class="drawer-divider need-help-seperator">Need Help?</li>
+                <li><a href="#">Tutorials</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Email Us</a></li>
+
+                </ul> <!-- .drawer-dropdown-content -->
+            </nav> <!-- .drawer-dropdown -->
+        </div> <!-- .drawer-dropdown-wrapper -->
+    </header>
+
+<style>
+    .pager-title-header{
+        padding-top: 10px;
+        font-weight: normal ;
+        font-size: 1.1rem !important;
+    }
+</style>
+<div class="panel category-panel">
+    <form method="GET" name="mainform" action="/tags/series"
+          style="display:inline">
+
+        <div class="panel-heading">
+            
+            
+            <div class="panel-title panel-title-center col-12 col-sm-11 text-muted float-start">
+                <h2 class="pager-title-header">824,239 Series</h2>
+                <p id="breadcrumbs" class="d-none d-sm-block">
+     <span>
+        
+        <a class="breadcrumb_link" href="/tags">Tags</a>
+     </span>
+                </p>
+                <div class="dropdown show d-block d-sm-none dropdown-breadcrumbs">
+                    <a class="breadcrumb_link" href="#" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                                                Tags
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <ul class="dropdown-breadcrumbs-listing">
+                                                                                    <li class="dropdown-breadcrumbs-item ml0"><a class="dropdown-item breadcrumb_link"
+                                                                                   href="/tags">Tags</a>
+                            </li>
+                                                    </ul>
+                    </div>
+                </div><!-- /dropdown -->
+
+            </div><!-- /panel-title -->
+            <div class="tools float-end hidden-xs">
+                <!--<h3>Displaying  for
+                  </h3>-->
+
+                            </div><!-- /tools -->
+        </div><!-- /panel-heading -->
+
+        <div class="panel-menu">
+            
+            
+                                                <div class="series-pager-header clear" style=" border-top: 1px solid #e2e2e2; margin-bottom: .5em; padding-left:8px; padding-top:12px;">
+                                <input type="checkbox" class="select-all-checkboxes pager-check-all-series-gtm" aria-label="Select All Releases">
+                <button name="addseries2" class="series-fred-pager-btn btn btn-sm btn-default add-to-data-list-gtm">Add to Data List</button>
+                <button name="addgraph2" class="series-fred-pager-btn btn btn-sm btn-default add-to-graph-gtm">Add to Graph</button>
+                <span class="add-multiple-graphs-to-dashboard-btn-container"></span>
+                
+                <div class="dropdown float-end">
+                    <button class="series-fred-pager-btn dropdown-toggle btn btn-sm btn-default sort-series-gtm" data-bs-toggle="dropdown"
+                            id="order-by-btn" role="combobox" aria-controls="order_by_options-dropdown" aria-label="Sort by Popularity" aria-description="Choose an option from the list below">Sort by Popularity <i class="caret sort-series-gtm"></i>
+                    </button>
+                    <ul class="dropdown-menu sort-dropdown" role="listbox" id="order_by_options-dropdown" aria-labeledby="order-by-btn">
+                                                <li><a href="#" data-order-by="pv" class="sort-dropdown-item dropdown-item sort-series-pv-gtm" role="option" aria-selected="true" aria-label="Popularity">Popularity</a></li>
+                                                <li><a href="#" data-order-by="lu" class="sort-dropdown-item dropdown-item sort-series-lu-gtm" role="option" aria-selected="false" aria-label="Updated">Updated</a></li>
+                                                <li><a href="#" data-order-by="oe" class="sort-dropdown-item dropdown-item sort-series-oe-gtm" role="option" aria-selected="false" aria-label="Observation End">Obs End</a></li>
+                                                <li><a href="#" data-order-by="os" class="sort-dropdown-item dropdown-item sort-series-os-gtm" role="option" aria-selected="false" aria-label="Observation Start">Obs Start</a></li>
+                                                <li><a href="#" data-order-by="t" class="sort-dropdown-item dropdown-item sort-series-t-gtm" role="option" aria-selected="false" aria-label="Title">Title</a></li>
+                                                <li><a href="#" data-order-by="f" class="sort-dropdown-item dropdown-item sort-series-f-gtm" role="option" aria-selected="false" aria-label="Frequency">Frequency</a></li>
+                                                <li><a href="#" data-order-by="u" class="sort-dropdown-item dropdown-item sort-series-u-gtm" role="option" aria-selected="false" aria-label="Units">Units</a></li>
+                                                <li><a href="#" data-order-by="sa" class="sort-dropdown-item dropdown-item sort-series-sa-gtm" role="option" aria-selected="false" aria-label="Seasonally Adjusted">Seas Adj</a></li>
+                                            </ul>
+                </div><!-- /dropdown -->
+
+            </div><!-- /series-pager-header -->
+
+        </div><!-- /panel-menu -->
+
+
+        <div class="panel-body ph20">
+
+            <input type="hidden" name="pageID" value="1">
+            <input type="hidden" name="ob" value="pv">
+            <input type="hidden" name="od" value="desc">
+                        <input type="hidden" name="t" value="">
+                        <input type="hidden" name="et" value="">
+            
+            <div class="series-pager-header hidden" style="margin-bottom:.5em">
+                                <input type="checkbox" class="select-all-checkboxes" aria-label="Select All Releases">
+                <button name="addseries1" class="btn btn-default btn-sm add-to-data-list-gtm">Add to Data List</button>
+                <button name="addgraph1" class="btn btn-default btn-sm add-to-graph-gtm">Add to Graph</button>
+                <span class="add-multiple-graphs-to-dashboard-btn-container"></span>
+                
+                <div class="dropdown float-end">
+                    <button class="dropdown-toggle btn btn-sm btn-default sort-series-gtm" data-bs-toggle="dropdown"
+                            id="order-by-btn" role="combobox" aria-controls="order_by_options-dropdown" aria-label="Sort by Popularity" aria-description="Choose an option from the list below">Sort by Popularity <i class="caret sort-series-gtm"></i>
+                    </button>
+                    <ul class="dropdown-menu" style="transform: translate3d(-19px, -34px, 0px);" role="listbox" id="order_by_options-dropdown" aria-labeledby="order-by-btn">
+                                                <li><a href="#" data-order-by="pv" class="dropdown-item sort-series-pv-gtm" role="option" aria-selected="true" aria-label="Popularity">Popularity</a></li>
+                                                <li><a href="#" data-order-by="lu" class="dropdown-item sort-series-lu-gtm" role="option" aria-selected="false" aria-label="Updated">Updated</a></li>
+                                                <li><a href="#" data-order-by="oe" class="dropdown-item sort-series-oe-gtm" role="option" aria-selected="false" aria-label="Observation End">Obs End</a></li>
+                                                <li><a href="#" data-order-by="os" class="dropdown-item sort-series-os-gtm" role="option" aria-selected="false" aria-label="Observation Start">Obs Start</a></li>
+                                                <li><a href="#" data-order-by="t" class="dropdown-item sort-series-t-gtm" role="option" aria-selected="false" aria-label="Title">Title</a></li>
+                                                <li><a href="#" data-order-by="f" class="dropdown-item sort-series-f-gtm" role="option" aria-selected="false" aria-label="Frequency">Frequency</a></li>
+                                                <li><a href="#" data-order-by="u" class="dropdown-item sort-series-u-gtm" role="option" aria-selected="false" aria-label="Units">Units</a></li>
+                                                <li><a href="#" data-order-by="sa" class="dropdown-item sort-series-sa-gtm" role="option" aria-selected="false" aria-label="Seasonally Adjusted">Seas Adj</a></li>
+                                            </ul>
+                </div><!-- /dropdown  -->
+            </div><!-- /series-pager-header  -->
+
+            <table border="0" id="series-pager" role="presentation" class="table-responsive">
+                
+                                
+                <tr class="series-pager-title">
+
+  <td valign="top" colspan="2">
+      <div class="display-results-title col-xs-12 col-sm-10">
+          <h3><a id="titleLink" href="/series/T10Y2Y" style="font-size:1.2em; padding-bottom: 2px" class="series-title pager-series-title-gtm">10-Year Treasury Constant Maturity Minus 2-Year Treasury Constant Maturity</a></h3>
+      </div>
+      <div class="display-results-popularity-bar d-none d-sm-block col-sm-2">
+        <span class="popularity-bar-span-parent" data-target="popularity-bar-span-T10Y2Y" tabindex="0" aria-label="popularity 100% popular" title="100% popular">
+       <span aria-hidden="true" style="padding-top: 3px; padding-left:60px;" class="popularity_bar">&nbsp;</span>       <span id="popularity-bar-span-T10Y2Y" aria-hidden="true" class="popularity_bar_background">&nbsp;</span></span>
+      </div>
+  </td>
+  </tr>
+
+<tr class="series-pager-attr">
+
+<td colspan="2">
+      <div class="series-meta series-group-meta">
+  <span class="attributes">Percent, Not Seasonally Adjusted</span>
+  <br class="clear">
+  </div>
+  <div class="series-meta">
+    
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[0]" value="T10Y2Y" aria-labelledby="unitLinkT10Y2Y">
+      <a id="unitLinkT10Y2Y" aria-describedby="aria-target-T10Y2Y" class="pager-series-attributes-gtm" href="/series/T10Y2Y">
+    
+        Daily      
+  
+  </a>
+    <span id="aria-target-T10Y2Y" aria-label="From 1976-06-01 to 2024-06-28 1 day ago"
+        class="series-meta-dates">
+    1976-06-01
+   to
+
+    2024-06-28
+    
+    (1 day ago)
+    </span>
+    <br class="clear">
+  
+                                
+                
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[1]" value="T10Y2YM" aria-labelledby="unitLinkT10Y2YM">
+      <a id="unitLinkT10Y2YM" aria-describedby="aria-target-T10Y2YM" class="pager-series-attributes-gtm" href="/series/T10Y2YM">
+    
+        Monthly      
+  
+  </a>
+    <span id="aria-target-T10Y2YM" aria-label="From Jun 1976 to May 2024 Jun 3"
+        class="series-meta-dates">
+    Jun 1976
+   to
+
+    May 2024
+    
+    (Jun 3)
+    </span>
+    
+  </div>
+</td>
+</tr>
+<tr><td colspan="2" style="font-size:9px">&nbsp;</td></tr>
+
+                                
+                <tr class="series-pager-title">
+
+  <td valign="top" colspan="2">
+      <div class="display-results-title col-xs-12 col-sm-10">
+          <h3><a id="titleLink" href="/series/MORTGAGE30US" style="font-size:1.2em; padding-bottom: 2px" class="series-title pager-series-title-gtm">30-Year Fixed Rate Mortgage Average in the United States</a></h3>
+      </div>
+      <div class="display-results-popularity-bar d-none d-sm-block col-sm-2">
+        <span class="popularity-bar-span-parent" data-target="popularity-bar-span-MORTGAGE30US" tabindex="0" aria-label="popularity 99% popular" title="99% popular">
+       <span aria-hidden="true" style="padding-top: 3px; padding-left:59px;" class="popularity_bar">&nbsp;</span>       <span id="popularity-bar-span-MORTGAGE30US" aria-hidden="true" class="popularity_bar_background">&nbsp;</span></span>
+      </div>
+  </td>
+  </tr>
+
+<tr class="series-pager-attr">
+
+<td colspan="2">
+      <div class="series-meta series-group-single">
+  <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[2]" value="MORTGAGE30US">
+  <span class="attributes" style="width:350px;">Percent, Weekly, Not Seasonally Adjusted</span><span class="series-meta-dates">1971-04-02 to 2024-06-27 (3 days ago)</span>
+  <br class="clear">
+  </div>
+    
+        <a id="unitLinkMORTGAGE30US" aria-describedby="aria-target-MORTGAGE30US" class="pager-series-attributes-gtm" href="/series/MORTGAGE30US">
+    
+  
+  
+  </a>
+      
+</td>
+</tr>
+<tr><td colspan="2" style="font-size:9px">&nbsp;</td></tr>
+
+                                
+                <tr class="series-pager-title">
+
+  <td valign="top" colspan="2">
+      <div class="display-results-title col-xs-12 col-sm-10">
+          <h3><a id="titleLink" href="/series/FEDFUNDS" style="font-size:1.2em; padding-bottom: 2px" class="series-title pager-series-title-gtm">Federal Funds Effective Rate</a></h3>
+      </div>
+      <div class="display-results-popularity-bar d-none d-sm-block col-sm-2">
+        <span class="popularity-bar-span-parent" data-target="popularity-bar-span-FEDFUNDS" tabindex="0" aria-label="popularity 99% popular" title="99% popular">
+       <span aria-hidden="true" style="padding-top: 3px; padding-left:59px;" class="popularity_bar">&nbsp;</span>       <span id="popularity-bar-span-FEDFUNDS" aria-hidden="true" class="popularity_bar_background">&nbsp;</span></span>
+      </div>
+  </td>
+  </tr>
+
+<tr class="series-pager-attr">
+
+<td colspan="2">
+      <div class="series-meta series-group-meta">
+  <span class="attributes">Percent, Not Seasonally Adjusted</span>
+  <br class="clear">
+  </div>
+  <div class="series-meta">
+    
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[3]" value="FEDFUNDS" aria-labelledby="unitLinkFEDFUNDS">
+      <a id="unitLinkFEDFUNDS" aria-describedby="aria-target-FEDFUNDS" class="pager-series-attributes-gtm" href="/series/FEDFUNDS">
+    
+        Monthly      
+  
+  </a>
+    <span id="aria-target-FEDFUNDS" aria-label="From Jul 1954 to May 2024 Jun 3"
+        class="series-meta-dates">
+    Jul 1954
+   to
+
+    May 2024
+    
+    (Jun 3)
+    </span>
+    <br class="clear">
+  
+                                
+                
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[4]" value="DFF" aria-labelledby="unitLinkDFF">
+      <a id="unitLinkDFF" aria-describedby="aria-target-DFF" class="pager-series-attributes-gtm" href="/series/DFF">
+    
+        Daily      
+  
+  </a>
+    <span id="aria-target-DFF" aria-label="From 1954-07-01 to 2024-06-27 1 day ago"
+        class="series-meta-dates">
+    1954-07-01
+   to
+
+    2024-06-27
+    
+    (1 day ago)
+    </span>
+    <br class="clear">
+  
+                                
+                
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[5]" value="FF" aria-labelledby="unitLinkFF">
+      <a id="unitLinkFF" aria-describedby="aria-target-FF" class="pager-series-attributes-gtm" href="/series/FF">
+    
+        Weekly      
+  
+  </a>
+    <span id="aria-target-FF" aria-label="From 1954-07-07 to 2024-06-26 2 days ago"
+        class="series-meta-dates">
+    1954-07-07
+   to
+
+    2024-06-26
+    
+    (2 days ago)
+    </span>
+    <br class="clear">
+  
+                                
+                
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[6]" value="RIFSPFFNB" aria-labelledby="unitLinkRIFSPFFNB">
+      <a id="unitLinkRIFSPFFNB" aria-describedby="aria-target-RIFSPFFNB" class="pager-series-attributes-gtm" href="/series/RIFSPFFNB">
+    
+        Daily      
+  
+  </a>
+    <span id="aria-target-RIFSPFFNB" aria-label="From 1954-07-01 to 2024-06-27 1 day ago"
+        class="series-meta-dates">
+    1954-07-01
+   to
+
+    2024-06-27
+    
+    (1 day ago)
+    </span>
+    <br class="clear">
+  
+                                
+                
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[7]" value="RIFSPFFNA" aria-labelledby="unitLinkRIFSPFFNA">
+      <a id="unitLinkRIFSPFFNA" aria-describedby="aria-target-RIFSPFFNA" class="pager-series-attributes-gtm" href="/series/RIFSPFFNA">
+    
+        Annual      
+  
+  </a>
+    <span id="aria-target-RIFSPFFNA" aria-label="From 1955 to 2023 Jan 2"
+        class="series-meta-dates">
+    1955
+   to
+
+    2023
+    
+    (Jan 2)
+    </span>
+    <br class="clear">
+  
+                                
+                
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[8]" value="RIFSPFFNBWAW" aria-labelledby="unitLinkRIFSPFFNBWAW">
+      <a id="unitLinkRIFSPFFNBWAW" aria-describedby="aria-target-RIFSPFFNBWAW" class="pager-series-attributes-gtm" href="/series/RIFSPFFNBWAW">
+    
+        Biweekly      
+  
+  </a>
+    <span id="aria-target-RIFSPFFNBWAW" aria-label="From 1954-07-14 to 2024-06-26 2 days ago"
+        class="series-meta-dates">
+    1954-07-14
+   to
+
+    2024-06-26
+    
+    (2 days ago)
+    </span>
+    
+  </div>
+</td>
+</tr>
+<tr><td colspan="2" style="font-size:9px">&nbsp;</td></tr>
+
+                                
+                <tr class="series-pager-title">
+
+  <td valign="top" colspan="2">
+      <div class="display-results-title col-xs-12 col-sm-10">
+          <h3><a id="titleLink" href="/series/M2SL" style="font-size:1.2em; padding-bottom: 2px" class="series-title pager-series-title-gtm">M2</a></h3>
+      </div>
+      <div class="display-results-popularity-bar d-none d-sm-block col-sm-2">
+        <span class="popularity-bar-span-parent" data-target="popularity-bar-span-M2SL" tabindex="0" aria-label="popularity 95% popular" title="95% popular">
+       <span aria-hidden="true" style="padding-top: 3px; padding-left:57px;" class="popularity_bar">&nbsp;</span>       <span id="popularity-bar-span-M2SL" aria-hidden="true" class="popularity_bar_background">&nbsp;</span></span>
+      </div>
+  </td>
+  </tr>
+
+<tr class="series-pager-attr">
+
+<td colspan="2">
+      <div class="series-meta series-group-meta">
+  <span class="attributes">Billions of Dollars</span>
+  <br class="clear">
+  </div>
+  <div class="series-meta">
+    
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[9]" value="M2SL" aria-labelledby="unitLinkM2SL">
+      <a id="unitLinkM2SL" aria-describedby="aria-target-M2SL" class="pager-series-attributes-gtm" href="/series/M2SL">
+    
+        Monthly,       
+        Seasonally Adjusted 
+      
+  </a>
+    <span id="aria-target-M2SL" aria-label="From Jan 1959 to May 2024 5 days ago"
+        class="series-meta-dates">
+    Jan 1959
+   to
+
+    May 2024
+    
+    (5 days ago)
+    </span>
+    <br class="clear">
+  
+                                
+                
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[10]" value="WM2NS" aria-labelledby="unitLinkWM2NS">
+      <a id="unitLinkWM2NS" aria-describedby="aria-target-WM2NS" class="pager-series-attributes-gtm" href="/series/WM2NS">
+    
+        Weekly,       
+        Not Seasonally Adjusted 
+      
+  </a>
+    <span id="aria-target-WM2NS" aria-label="From 1980-11-03 to 2024-06-03 4 days ago"
+        class="series-meta-dates">
+    1980-11-03
+   to
+
+    2024-06-03
+    
+    (4 days ago)
+    </span>
+    <br class="clear">
+  
+                                
+                
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[11]" value="M2NS" aria-labelledby="unitLinkM2NS">
+      <a id="unitLinkM2NS" aria-describedby="aria-target-M2NS" class="pager-series-attributes-gtm" href="/series/M2NS">
+    
+        Monthly,       
+        Not Seasonally Adjusted 
+      
+  </a>
+    <span id="aria-target-M2NS" aria-label="From Jan 1959 to May 2024 5 days ago"
+        class="series-meta-dates">
+    Jan 1959
+   to
+
+    May 2024
+    
+    (5 days ago)
+    </span>
+    
+  </div>
+</td>
+</tr>
+<tr><td colspan="2" style="font-size:9px">&nbsp;</td></tr>
+
+                                
+                <tr class="series-pager-title">
+
+  <td valign="top" colspan="2">
+      <div class="display-results-title col-xs-12 col-sm-10">
+          <h3><a id="titleLink" href="/series/RRPONTSYD" style="font-size:1.2em; padding-bottom: 2px" class="series-title pager-series-title-gtm">Overnight Reverse Repurchase Agreements: Treasury Securities Sold by the Federal Reserve in the Temporary Open Market Operations</a></h3>
+      </div>
+      <div class="display-results-popularity-bar d-none d-sm-block col-sm-2">
+        <span class="popularity-bar-span-parent" data-target="popularity-bar-span-RRPONTSYD" tabindex="0" aria-label="popularity 95% popular" title="95% popular">
+       <span aria-hidden="true" style="padding-top: 3px; padding-left:57px;" class="popularity_bar">&nbsp;</span>       <span id="popularity-bar-span-RRPONTSYD" aria-hidden="true" class="popularity_bar_background">&nbsp;</span></span>
+      </div>
+  </td>
+  </tr>
+
+<tr class="series-pager-attr">
+
+<td colspan="2">
+      <div class="series-meta series-group-single">
+  <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[12]" value="RRPONTSYD">
+  <span class="attributes" style="width:350px;">Billions of US Dollars, Daily, Not Seasonally Adjusted</span><span class="series-meta-dates">2003-02-07 to 2024-06-28 (1 day ago)</span>
+  <br class="clear">
+  </div>
+    
+        <a id="unitLinkRRPONTSYD" aria-describedby="aria-target-RRPONTSYD" class="pager-series-attributes-gtm" href="/series/RRPONTSYD">
+    
+  
+  
+  </a>
+      
+</td>
+</tr>
+<tr><td colspan="2" style="font-size:9px">&nbsp;</td></tr>
+
+                                
+                <tr class="series-pager-title">
+
+  <td valign="top" colspan="2">
+      <div class="display-results-title col-xs-12 col-sm-10">
+          <h3><a id="titleLink" href="/series/CPIAUCSL" style="font-size:1.2em; padding-bottom: 2px" class="series-title pager-series-title-gtm">Consumer Price Index for All Urban Consumers: All Items in U.S. City Average</a></h3>
+      </div>
+      <div class="display-results-popularity-bar d-none d-sm-block col-sm-2">
+        <span class="popularity-bar-span-parent" data-target="popularity-bar-span-CPIAUCSL" tabindex="0" aria-label="popularity 95% popular" title="95% popular">
+       <span aria-hidden="true" style="padding-top: 3px; padding-left:57px;" class="popularity_bar">&nbsp;</span>       <span id="popularity-bar-span-CPIAUCSL" aria-hidden="true" class="popularity_bar_background">&nbsp;</span></span>
+      </div>
+  </td>
+  </tr>
+
+<tr class="series-pager-attr">
+
+<td colspan="2">
+      <div class="series-meta series-group-meta">
+  <span class="attributes">Index 1982-1984=100</span>
+  <br class="clear">
+  </div>
+  <div class="series-meta">
+    
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[13]" value="CPIAUCSL" aria-labelledby="unitLinkCPIAUCSL">
+      <a id="unitLinkCPIAUCSL" aria-describedby="aria-target-CPIAUCSL" class="pager-series-attributes-gtm" href="/series/CPIAUCSL">
+    
+        Monthly,       
+        Seasonally Adjusted 
+      
+  </a>
+    <span id="aria-target-CPIAUCSL" aria-label="From Jan 1947 to May 2024 Jun 12"
+        class="series-meta-dates">
+    Jan 1947
+   to
+
+    May 2024
+    
+    (Jun 12)
+    </span>
+    <br class="clear">
+  
+                                
+                
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[14]" value="CPIAUCNS" aria-labelledby="unitLinkCPIAUCNS">
+      <a id="unitLinkCPIAUCNS" aria-describedby="aria-target-CPIAUCNS" class="pager-series-attributes-gtm" href="/series/CPIAUCNS">
+    
+        Monthly,       
+        Not Seasonally Adjusted 
+      
+  </a>
+    <span id="aria-target-CPIAUCNS" aria-label="From Jan 1913 to May 2024 Jun 12"
+        class="series-meta-dates">
+    Jan 1913
+   to
+
+    May 2024
+    
+    (Jun 12)
+    </span>
+    <br class="clear">
+  
+                                
+                
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[15]" value="CUUS0000SA0" aria-labelledby="unitLinkCUUS0000SA0">
+      <a id="unitLinkCUUS0000SA0" aria-describedby="aria-target-CUUS0000SA0" class="pager-series-attributes-gtm" href="/series/CUUS0000SA0">
+    
+        Semiannual,       
+        Not Seasonally Adjusted 
+      
+  </a>
+    <span id="aria-target-CUUS0000SA0" aria-label="From H1 1984 to H2 2023 Jan 11"
+        class="series-meta-dates">
+    H1 1984
+   to
+
+    H2 2023
+    
+    (Jan 11)
+    </span>
+    
+  </div>
+</td>
+</tr>
+<tr><td colspan="2" style="font-size:9px">&nbsp;</td></tr>
+
+                                
+                <tr class="series-pager-title">
+
+  <td valign="top" colspan="2">
+      <div class="display-results-title col-xs-12 col-sm-10">
+          <h3><a id="titleLink" href="/series/UNRATE" style="font-size:1.2em; padding-bottom: 2px" class="series-title pager-series-title-gtm">Unemployment Rate</a></h3>
+      </div>
+      <div class="display-results-popularity-bar d-none d-sm-block col-sm-2">
+        <span class="popularity-bar-span-parent" data-target="popularity-bar-span-UNRATE" tabindex="0" aria-label="popularity 95% popular" title="95% popular">
+       <span aria-hidden="true" style="padding-top: 3px; padding-left:57px;" class="popularity_bar">&nbsp;</span>       <span id="popularity-bar-span-UNRATE" aria-hidden="true" class="popularity_bar_background">&nbsp;</span></span>
+      </div>
+  </td>
+  </tr>
+
+<tr class="series-pager-attr">
+
+<td colspan="2">
+      <div class="series-meta series-group-meta">
+  <span class="attributes">Percent, Monthly</span>
+  <br class="clear">
+  </div>
+  <div class="series-meta">
+    
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[16]" value="UNRATE" aria-labelledby="unitLinkUNRATE">
+      <a id="unitLinkUNRATE" aria-describedby="aria-target-UNRATE" class="pager-series-attributes-gtm" href="/series/UNRATE">
+    
+  
+        Seasonally Adjusted 
+      
+  </a>
+    <span id="aria-target-UNRATE" aria-label="From Jan 1948 to May 2024 Jun 7"
+        class="series-meta-dates">
+    Jan 1948
+   to
+
+    May 2024
+    
+    (Jun 7)
+    </span>
+    <br class="clear">
+  
+                                
+                
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[17]" value="UNRATENSA" aria-labelledby="unitLinkUNRATENSA">
+      <a id="unitLinkUNRATENSA" aria-describedby="aria-target-UNRATENSA" class="pager-series-attributes-gtm" href="/series/UNRATENSA">
+    
+  
+        Not Seasonally Adjusted 
+      
+  </a>
+    <span id="aria-target-UNRATENSA" aria-label="From Jan 1948 to May 2024 Jun 7"
+        class="series-meta-dates">
+    Jan 1948
+   to
+
+    May 2024
+    
+    (Jun 7)
+    </span>
+    
+  </div>
+</td>
+</tr>
+<tr><td colspan="2" style="font-size:9px">&nbsp;</td></tr>
+
+                                
+                <tr class="series-pager-title">
+
+  <td valign="top" colspan="2">
+      <div class="display-results-title col-xs-12 col-sm-10">
+          <h3><a id="titleLink" href="/series/WALCL" style="font-size:1.2em; padding-bottom: 2px" class="series-title pager-series-title-gtm">Assets: Total Assets: Total Assets (Less Eliminations from Consolidation): Wednesday Level</a></h3>
+      </div>
+      <div class="display-results-popularity-bar d-none d-sm-block col-sm-2">
+        <span class="popularity-bar-span-parent" data-target="popularity-bar-span-WALCL" tabindex="0" aria-label="popularity 94% popular" title="94% popular">
+       <span aria-hidden="true" style="padding-top: 3px; padding-left:56px;" class="popularity_bar">&nbsp;</span>       <span id="popularity-bar-span-WALCL" aria-hidden="true" class="popularity_bar_background">&nbsp;</span></span>
+      </div>
+  </td>
+  </tr>
+
+<tr class="series-pager-attr">
+
+<td colspan="2">
+      <div class="series-meta series-group-single">
+  <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[18]" value="WALCL">
+  <span class="attributes" style="width:350px;">Millions of U.S. Dollars, Weekly, Not Seasonally Adjusted</span><span class="series-meta-dates">2002-12-18 to 2024-06-26 (2 days ago)</span>
+  <br class="clear">
+  </div>
+    
+        <a id="unitLinkWALCL" aria-describedby="aria-target-WALCL" class="pager-series-attributes-gtm" href="/series/WALCL">
+    
+  
+  
+  </a>
+      
+</td>
+</tr>
+<tr><td colspan="2" style="font-size:9px">&nbsp;</td></tr>
+
+                                
+                <tr class="series-pager-title">
+
+  <td valign="top" colspan="2">
+      <div class="display-results-title col-xs-12 col-sm-10">
+          <h3><a id="titleLink" href="/series/T10Y3M" style="font-size:1.2em; padding-bottom: 2px" class="series-title pager-series-title-gtm">10-Year Treasury Constant Maturity Minus 3-Month Treasury Constant Maturity</a></h3>
+      </div>
+      <div class="display-results-popularity-bar d-none d-sm-block col-sm-2">
+        <span class="popularity-bar-span-parent" data-target="popularity-bar-span-T10Y3M" tabindex="0" aria-label="popularity 94% popular" title="94% popular">
+       <span aria-hidden="true" style="padding-top: 3px; padding-left:56px;" class="popularity_bar">&nbsp;</span>       <span id="popularity-bar-span-T10Y3M" aria-hidden="true" class="popularity_bar_background">&nbsp;</span></span>
+      </div>
+  </td>
+  </tr>
+
+<tr class="series-pager-attr">
+
+<td colspan="2">
+      <div class="series-meta series-group-meta">
+  <span class="attributes">Percent, Not Seasonally Adjusted</span>
+  <br class="clear">
+  </div>
+  <div class="series-meta">
+    
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[19]" value="T10Y3M" aria-labelledby="unitLinkT10Y3M">
+      <a id="unitLinkT10Y3M" aria-describedby="aria-target-T10Y3M" class="pager-series-attributes-gtm" href="/series/T10Y3M">
+    
+        Daily      
+  
+  </a>
+    <span id="aria-target-T10Y3M" aria-label="From 1982-01-04 to 2024-06-28 1 day ago"
+        class="series-meta-dates">
+    1982-01-04
+   to
+
+    2024-06-28
+    
+    (1 day ago)
+    </span>
+    <br class="clear">
+  
+                                
+                
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[20]" value="T10Y3MM" aria-labelledby="unitLinkT10Y3MM">
+      <a id="unitLinkT10Y3MM" aria-describedby="aria-target-T10Y3MM" class="pager-series-attributes-gtm" href="/series/T10Y3MM">
+    
+        Monthly      
+  
+  </a>
+    <span id="aria-target-T10Y3MM" aria-label="From Jan 1982 to May 2024 Jun 3"
+        class="series-meta-dates">
+    Jan 1982
+   to
+
+    May 2024
+    
+    (Jun 3)
+    </span>
+    
+  </div>
+</td>
+</tr>
+<tr><td colspan="2" style="font-size:9px">&nbsp;</td></tr>
+
+                                
+                <tr class="series-pager-title">
+
+  <td valign="top" colspan="2">
+      <div class="display-results-title col-xs-12 col-sm-10">
+          <h3><a id="titleLink" href="/series/GDP" style="font-size:1.2em; padding-bottom: 2px" class="series-title pager-series-title-gtm">Gross Domestic Product</a></h3>
+      </div>
+      <div class="display-results-popularity-bar d-none d-sm-block col-sm-2">
+        <span class="popularity-bar-span-parent" data-target="popularity-bar-span-GDP" tabindex="0" aria-label="popularity 93% popular" title="93% popular">
+       <span aria-hidden="true" style="padding-top: 3px; padding-left:56px;" class="popularity_bar">&nbsp;</span>       <span id="popularity-bar-span-GDP" aria-hidden="true" class="popularity_bar_background">&nbsp;</span></span>
+      </div>
+  </td>
+  </tr>
+
+<tr class="series-pager-attr">
+
+<td colspan="2">
+    <div class="series-meta">
+  
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[21]" value="GDP" aria-labelledby="unitLinkGDP">
+      <a id="unitLinkGDP" aria-describedby="aria-target-GDP" class="pager-series-attributes-gtm" href="/series/GDP">
+          Billions of Dollars,       
+        Quarterly,       
+        Seasonally Adjusted Annual Rate 
+      
+  </a>
+    <span id="aria-target-GDP" aria-label="From Q1 1947 to Q1 2024 3 days ago"
+        class="series-meta-dates">
+    Q1 1947
+   to
+
+    Q1 2024
+    
+    (3 days ago)
+    </span>
+    <br class="clear">
+  
+                                
+                
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[22]" value="GDPA" aria-labelledby="unitLinkGDPA">
+      <a id="unitLinkGDPA" aria-describedby="aria-target-GDPA" class="pager-series-attributes-gtm" href="/series/GDPA">
+          Billions of Dollars,       
+        Annual,       
+        Not Seasonally Adjusted 
+      
+  </a>
+    <span id="aria-target-GDPA" aria-label="From 1929 to 2023 Mar 28"
+        class="series-meta-dates">
+    1929
+   to
+
+    2023
+    
+    (Mar 28)
+    </span>
+    <br class="clear">
+  
+                                
+                
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[23]" value="A191RP1Q027SBEA" aria-labelledby="unitLinkA191RP1Q027SBEA">
+      <a id="unitLinkA191RP1Q027SBEA" aria-describedby="aria-target-A191RP1Q027SBEA" class="pager-series-attributes-gtm" href="/series/A191RP1Q027SBEA">
+          Percent Change from Preceding Period,       
+        Quarterly,       
+        Seasonally Adjusted Annual Rate 
+      
+  </a>
+    <span id="aria-target-A191RP1Q027SBEA" aria-label="From Q2 1947 to Q1 2024 3 days ago"
+        class="series-meta-dates">
+    Q2 1947
+   to
+
+    Q1 2024
+    
+    (3 days ago)
+    </span>
+    <br class="clear">
+  
+                                
+                
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[24]" value="NA000334Q" aria-labelledby="unitLinkNA000334Q">
+      <a id="unitLinkNA000334Q" aria-describedby="aria-target-NA000334Q" class="pager-series-attributes-gtm" href="/series/NA000334Q">
+          Millions of Dollars,       
+        Quarterly,       
+        Not Seasonally Adjusted 
+      
+  </a>
+    <span id="aria-target-NA000334Q" aria-label="From Q1 1947 to Q1 2024 3 days ago"
+        class="series-meta-dates">
+    Q1 1947
+   to
+
+    Q1 2024
+    
+    (3 days ago)
+    </span>
+    <br class="clear">
+  
+                                
+                
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[25]" value="FYGDP" aria-labelledby="unitLinkFYGDP">
+      <a id="unitLinkFYGDP" aria-describedby="aria-target-FYGDP" class="pager-series-attributes-gtm" href="/series/FYGDP">
+          Billions of Dollars,       
+        Annual,       
+        Not Seasonally Adjusted 
+      
+  </a>
+    <span id="aria-target-FYGDP" aria-label="From 1930 to 2023 Mar 11"
+        class="series-meta-dates">
+    1930
+   to
+
+    2023
+    
+    (Mar 11)
+    </span>
+    <br class="clear">
+  
+                                
+                
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[26]" value="A191RP1A027NBEA" aria-labelledby="unitLinkA191RP1A027NBEA">
+      <a id="unitLinkA191RP1A027NBEA" aria-describedby="aria-target-A191RP1A027NBEA" class="pager-series-attributes-gtm" href="/series/A191RP1A027NBEA">
+          Percent Change from Preceding Period,       
+        Annual,       
+        Not Seasonally Adjusted 
+      
+  </a>
+    <span id="aria-target-A191RP1A027NBEA" aria-label="From 1930 to 2023 Jan 25"
+        class="series-meta-dates">
+    1930
+   to
+
+    2023
+    
+    (Jan 25)
+    </span>
+    <br class="clear">
+  
+                                
+                
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[27]" value="NC000334Q" aria-labelledby="unitLinkNC000334Q">
+      <a id="unitLinkNC000334Q" aria-describedby="aria-target-NC000334Q" class="pager-series-attributes-gtm" href="/series/NC000334Q">
+          Index 2017=100,       
+        Quarterly,       
+        Not Seasonally Adjusted 
+      
+  </a>
+    <span id="aria-target-NC000334Q" aria-label="From Q1 2002 to Q1 2024 3 days ago"
+        class="series-meta-dates">
+    Q1 2002
+   to
+
+    Q1 2024
+    
+    (3 days ago)
+    </span>
+    
+  </div>
+</td>
+</tr>
+<tr><td colspan="2" style="font-size:9px">&nbsp;</td></tr>
+
+                                
+                <tr class="series-pager-title">
+
+  <td valign="top" colspan="2">
+      <div class="display-results-title col-xs-12 col-sm-10">
+          <h3><a id="titleLink" href="/series/GDPC1" style="font-size:1.2em; padding-bottom: 2px" class="series-title pager-series-title-gtm">Real Gross Domestic Product</a></h3>
+      </div>
+      <div class="display-results-popularity-bar d-none d-sm-block col-sm-2">
+        <span class="popularity-bar-span-parent" data-target="popularity-bar-span-GDPC1" tabindex="0" aria-label="popularity 93% popular" title="93% popular">
+       <span aria-hidden="true" style="padding-top: 3px; padding-left:56px;" class="popularity_bar">&nbsp;</span>       <span id="popularity-bar-span-GDPC1" aria-hidden="true" class="popularity_bar_background">&nbsp;</span></span>
+      </div>
+  </td>
+  </tr>
+
+<tr class="series-pager-attr">
+
+<td colspan="2">
+    <div class="series-meta">
+  
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[28]" value="GDPC1" aria-labelledby="unitLinkGDPC1">
+      <a id="unitLinkGDPC1" aria-describedby="aria-target-GDPC1" class="pager-series-attributes-gtm" href="/series/GDPC1">
+          Billions of Chained 2017 Dollars,       
+        Quarterly,       
+        Seasonally Adjusted Annual Rate 
+      
+  </a>
+    <span id="aria-target-GDPC1" aria-label="From Q1 1947 to Q1 2024 3 days ago"
+        class="series-meta-dates">
+    Q1 1947
+   to
+
+    Q1 2024
+    
+    (3 days ago)
+    </span>
+    <br class="clear">
+  
+                                
+                
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[29]" value="A191RL1Q225SBEA" aria-labelledby="unitLinkA191RL1Q225SBEA">
+      <a id="unitLinkA191RL1Q225SBEA" aria-describedby="aria-target-A191RL1Q225SBEA" class="pager-series-attributes-gtm" href="/series/A191RL1Q225SBEA">
+          Percent Change from Preceding Period,       
+        Quarterly,       
+        Seasonally Adjusted Annual Rate 
+      
+  </a>
+    <span id="aria-target-A191RL1Q225SBEA" aria-label="From Q2 1947 to Q1 2024 3 days ago"
+        class="series-meta-dates">
+    Q2 1947
+   to
+
+    Q1 2024
+    
+    (3 days ago)
+    </span>
+    <br class="clear">
+  
+                                
+                
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[30]" value="GDPCA" aria-labelledby="unitLinkGDPCA">
+      <a id="unitLinkGDPCA" aria-describedby="aria-target-GDPCA" class="pager-series-attributes-gtm" href="/series/GDPCA">
+          Billions of Chained 2017 Dollars,       
+        Annual,       
+        Not Seasonally Adjusted 
+      
+  </a>
+    <span id="aria-target-GDPCA" aria-label="From 1929 to 2023 Mar 28"
+        class="series-meta-dates">
+    1929
+   to
+
+    2023
+    
+    (Mar 28)
+    </span>
+    <br class="clear">
+  
+                                
+                
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[31]" value="A191RO1Q156NBEA" aria-labelledby="unitLinkA191RO1Q156NBEA">
+      <a id="unitLinkA191RO1Q156NBEA" aria-describedby="aria-target-A191RO1Q156NBEA" class="pager-series-attributes-gtm" href="/series/A191RO1Q156NBEA">
+          Percent Change from Quarter One Year Ago,       
+        Quarterly,       
+        Seasonally Adjusted 
+      
+  </a>
+    <span id="aria-target-A191RO1Q156NBEA" aria-label="From Q1 1948 to Q1 2024 May 30"
+        class="series-meta-dates">
+    Q1 1948
+   to
+
+    Q1 2024
+    
+    (May 30)
+    </span>
+    <br class="clear">
+  
+                                
+                
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[32]" value="A191RL1A225NBEA" aria-labelledby="unitLinkA191RL1A225NBEA">
+      <a id="unitLinkA191RL1A225NBEA" aria-describedby="aria-target-A191RL1A225NBEA" class="pager-series-attributes-gtm" href="/series/A191RL1A225NBEA">
+          Percent Change from Preceding Period,       
+        Annual,       
+        Not Seasonally Adjusted 
+      
+  </a>
+    <span id="aria-target-A191RL1A225NBEA" aria-label="From 1930 to 2023 Jan 25"
+        class="series-meta-dates">
+    1930
+   to
+
+    2023
+    
+    (Jan 25)
+    </span>
+    <br class="clear">
+  
+                                
+                
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[33]" value="ND000334Q" aria-labelledby="unitLinkND000334Q">
+      <a id="unitLinkND000334Q" aria-describedby="aria-target-ND000334Q" class="pager-series-attributes-gtm" href="/series/ND000334Q">
+          Billions of Chained 2017 Dollars,       
+        Quarterly,       
+        Not Seasonally Adjusted 
+      
+  </a>
+    <span id="aria-target-ND000334Q" aria-label="From Q1 2002 to Q1 2024 3 days ago"
+        class="series-meta-dates">
+    Q1 2002
+   to
+
+    Q1 2024
+    
+    (3 days ago)
+    </span>
+    <br class="clear">
+  
+                                
+                
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[34]" value="OB000334Q" aria-labelledby="unitLinkOB000334Q">
+      <a id="unitLinkOB000334Q" aria-describedby="aria-target-OB000334Q" class="pager-series-attributes-gtm" href="/series/OB000334Q">
+          Percent Change from Quarter One Year Ago,       
+        Quarterly,       
+        Not Seasonally Adjusted 
+      
+  </a>
+    <span id="aria-target-OB000334Q" aria-label="From Q1 2003 to Q1 2024 3 days ago"
+        class="series-meta-dates">
+    Q1 2003
+   to
+
+    Q1 2024
+    
+    (3 days ago)
+    </span>
+    <br class="clear">
+  
+                                
+                
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[35]" value="NB000334Q" aria-labelledby="unitLinkNB000334Q">
+      <a id="unitLinkNB000334Q" aria-describedby="aria-target-NB000334Q" class="pager-series-attributes-gtm" href="/series/NB000334Q">
+          Index 2017=100,       
+        Quarterly,       
+        Not Seasonally Adjusted 
+      
+  </a>
+    <span id="aria-target-NB000334Q" aria-label="From Q1 2002 to Q1 2024 3 days ago"
+        class="series-meta-dates">
+    Q1 2002
+   to
+
+    Q1 2024
+    
+    (3 days ago)
+    </span>
+    
+  </div>
+</td>
+</tr>
+<tr><td colspan="2" style="font-size:9px">&nbsp;</td></tr>
+
+                                
+                <tr class="series-pager-title">
+
+  <td valign="top" colspan="2">
+      <div class="display-results-title col-xs-12 col-sm-10">
+          <h3><a id="titleLink" href="/series/DGS10" style="font-size:1.2em; padding-bottom: 2px" class="series-title pager-series-title-gtm">Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity, Quoted on an Investment Basis</a></h3>
+      </div>
+      <div class="display-results-popularity-bar d-none d-sm-block col-sm-2">
+        <span class="popularity-bar-span-parent" data-target="popularity-bar-span-DGS10" tabindex="0" aria-label="popularity 93% popular" title="93% popular">
+       <span aria-hidden="true" style="padding-top: 3px; padding-left:56px;" class="popularity_bar">&nbsp;</span>       <span id="popularity-bar-span-DGS10" aria-hidden="true" class="popularity_bar_background">&nbsp;</span></span>
+      </div>
+  </td>
+  </tr>
+
+<tr class="series-pager-attr">
+
+<td colspan="2">
+      <div class="series-meta series-group-meta">
+  <span class="attributes">Percent, Not Seasonally Adjusted</span>
+  <br class="clear">
+  </div>
+  <div class="series-meta">
+    
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[36]" value="DGS10" aria-labelledby="unitLinkDGS10">
+      <a id="unitLinkDGS10" aria-describedby="aria-target-DGS10" class="pager-series-attributes-gtm" href="/series/DGS10">
+    
+        Daily      
+  
+  </a>
+    <span id="aria-target-DGS10" aria-label="From 1962-01-02 to 2024-06-27 1 day ago"
+        class="series-meta-dates">
+    1962-01-02
+   to
+
+    2024-06-27
+    
+    (1 day ago)
+    </span>
+    <br class="clear">
+  
+                                
+                
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[37]" value="GS10" aria-labelledby="unitLinkGS10">
+      <a id="unitLinkGS10" aria-describedby="aria-target-GS10" class="pager-series-attributes-gtm" href="/series/GS10">
+    
+        Monthly      
+  
+  </a>
+    <span id="aria-target-GS10" aria-label="From Apr 1953 to May 2024 Jun 3"
+        class="series-meta-dates">
+    Apr 1953
+   to
+
+    May 2024
+    
+    (Jun 3)
+    </span>
+    <br class="clear">
+  
+                                
+                
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[38]" value="WGS10YR" aria-labelledby="unitLinkWGS10YR">
+      <a id="unitLinkWGS10YR" aria-describedby="aria-target-WGS10YR" class="pager-series-attributes-gtm" href="/series/WGS10YR">
+    
+        Weekly      
+  
+  </a>
+    <span id="aria-target-WGS10YR" aria-label="From 1962-01-05 to 2024-06-21 5 days ago"
+        class="series-meta-dates">
+    1962-01-05
+   to
+
+    2024-06-21
+    
+    (5 days ago)
+    </span>
+    <br class="clear">
+  
+                                
+                
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[39]" value="RIFLGFCY10NA" aria-labelledby="unitLinkRIFLGFCY10NA">
+      <a id="unitLinkRIFLGFCY10NA" aria-describedby="aria-target-RIFLGFCY10NA" class="pager-series-attributes-gtm" href="/series/RIFLGFCY10NA">
+    
+        Annual      
+  
+  </a>
+    <span id="aria-target-RIFLGFCY10NA" aria-label="From 1962 to 2023 Jan 2"
+        class="series-meta-dates">
+    1962
+   to
+
+    2023
+    
+    (Jan 2)
+    </span>
+    
+  </div>
+</td>
+</tr>
+<tr><td colspan="2" style="font-size:9px">&nbsp;</td></tr>
+
+                                
+                <tr class="series-pager-title">
+
+  <td valign="top" colspan="2">
+      <div class="display-results-title col-xs-12 col-sm-10">
+          <h3><a id="titleLink" href="/series/BAMLH0A0HYM2" style="font-size:1.2em; padding-bottom: 2px" class="series-title pager-series-title-gtm">ICE BofA US High Yield Index Option-Adjusted Spread</a></h3>
+      </div>
+      <div class="display-results-popularity-bar d-none d-sm-block col-sm-2">
+        <span class="popularity-bar-span-parent" data-target="popularity-bar-span-BAMLH0A0HYM2" tabindex="0" aria-label="popularity 92% popular" title="92% popular">
+       <span aria-hidden="true" style="padding-top: 3px; padding-left:55px;" class="popularity_bar">&nbsp;</span>       <span id="popularity-bar-span-BAMLH0A0HYM2" aria-hidden="true" class="popularity_bar_background">&nbsp;</span></span>
+      </div>
+  </td>
+  </tr>
+
+<tr class="series-pager-attr">
+
+<td colspan="2">
+      <div class="series-meta series-group-single">
+  <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[40]" value="BAMLH0A0HYM2">
+  <span class="attributes" style="width:350px;">Percent, Daily, Not Seasonally Adjusted</span><span class="series-meta-dates">1996-12-31 to 2024-06-27 (2 days ago)</span>
+  <br class="clear">
+  </div>
+    
+        <a id="unitLinkBAMLH0A0HYM2" aria-describedby="aria-target-BAMLH0A0HYM2" class="pager-series-attributes-gtm" href="/series/BAMLH0A0HYM2">
+    
+  
+  
+  </a>
+      
+</td>
+</tr>
+<tr><td colspan="2" style="font-size:9px">&nbsp;</td></tr>
+
+                                
+                <tr class="series-pager-title">
+
+  <td valign="top" colspan="2">
+      <div class="display-results-title col-xs-12 col-sm-10">
+          <h3><a id="titleLink" href="/series/MSPUS" style="font-size:1.2em; padding-bottom: 2px" class="series-title pager-series-title-gtm">Median Sales Price of Houses Sold for the United States</a></h3>
+      </div>
+      <div class="display-results-popularity-bar d-none d-sm-block col-sm-2">
+        <span class="popularity-bar-span-parent" data-target="popularity-bar-span-MSPUS" tabindex="0" aria-label="popularity 90% popular" title="90% popular">
+       <span aria-hidden="true" style="padding-top: 3px; padding-left:54px;" class="popularity_bar">&nbsp;</span>       <span id="popularity-bar-span-MSPUS" aria-hidden="true" class="popularity_bar_background">&nbsp;</span></span>
+      </div>
+  </td>
+  </tr>
+
+<tr class="series-pager-attr">
+
+<td colspan="2">
+      <div class="series-meta series-group-single">
+  <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[41]" value="MSPUS">
+  <span class="attributes" style="width:350px;">Dollars, Quarterly, Not Seasonally Adjusted</span><span class="series-meta-dates">Q1 1963 to Q1 2024 (May 23)</span>
+  <br class="clear">
+  </div>
+    
+        <a id="unitLinkMSPUS" aria-describedby="aria-target-MSPUS" class="pager-series-attributes-gtm" href="/series/MSPUS">
+    
+  
+  
+  </a>
+      
+</td>
+</tr>
+<tr><td colspan="2" style="font-size:9px">&nbsp;</td></tr>
+
+                                
+                <tr class="series-pager-title">
+
+  <td valign="top" colspan="2">
+      <div class="display-results-title col-xs-12 col-sm-10">
+          <h3><a id="titleLink" href="/series/CSUSHPINSA" style="font-size:1.2em; padding-bottom: 2px" class="series-title pager-series-title-gtm">S&amp;P CoreLogic Case-Shiller U.S. National Home Price Index</a></h3>
+      </div>
+      <div class="display-results-popularity-bar d-none d-sm-block col-sm-2">
+        <span class="popularity-bar-span-parent" data-target="popularity-bar-span-CSUSHPINSA" tabindex="0" aria-label="popularity 90% popular" title="90% popular">
+       <span aria-hidden="true" style="padding-top: 3px; padding-left:54px;" class="popularity_bar">&nbsp;</span>       <span id="popularity-bar-span-CSUSHPINSA" aria-hidden="true" class="popularity_bar_background">&nbsp;</span></span>
+      </div>
+  </td>
+  </tr>
+
+<tr class="series-pager-attr">
+
+<td colspan="2">
+      <div class="series-meta series-group-meta">
+  <span class="attributes">Index Jan 2000=100, Monthly</span>
+  <br class="clear">
+  </div>
+  <div class="series-meta">
+    
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[42]" value="CSUSHPINSA" aria-labelledby="unitLinkCSUSHPINSA">
+      <a id="unitLinkCSUSHPINSA" aria-describedby="aria-target-CSUSHPINSA" class="pager-series-attributes-gtm" href="/series/CSUSHPINSA">
+    
+  
+        Not Seasonally Adjusted 
+      
+  </a>
+    <span id="aria-target-CSUSHPINSA" aria-label="From Jan 1987 to Apr 2024 5 days ago"
+        class="series-meta-dates">
+    Jan 1987
+   to
+
+    Apr 2024
+    
+    (5 days ago)
+    </span>
+    <br class="clear">
+  
+                                
+                
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[43]" value="CSUSHPISA" aria-labelledby="unitLinkCSUSHPISA">
+      <a id="unitLinkCSUSHPISA" aria-describedby="aria-target-CSUSHPISA" class="pager-series-attributes-gtm" href="/series/CSUSHPISA">
+    
+  
+        Seasonally Adjusted 
+      
+  </a>
+    <span id="aria-target-CSUSHPISA" aria-label="From Jan 1987 to Apr 2024 5 days ago"
+        class="series-meta-dates">
+    Jan 1987
+   to
+
+    Apr 2024
+    
+    (5 days ago)
+    </span>
+    
+  </div>
+</td>
+</tr>
+<tr><td colspan="2" style="font-size:9px">&nbsp;</td></tr>
+
+                                
+                <tr class="series-pager-title">
+
+  <td valign="top" colspan="2">
+      <div class="display-results-title col-xs-12 col-sm-10">
+          <h3><a id="titleLink" href="/series/T10YIE" style="font-size:1.2em; padding-bottom: 2px" class="series-title pager-series-title-gtm">10-Year Breakeven Inflation Rate</a></h3>
+      </div>
+      <div class="display-results-popularity-bar d-none d-sm-block col-sm-2">
+        <span class="popularity-bar-span-parent" data-target="popularity-bar-span-T10YIE" tabindex="0" aria-label="popularity 89% popular" title="89% popular">
+       <span aria-hidden="true" style="padding-top: 3px; padding-left:53px;" class="popularity_bar">&nbsp;</span>       <span id="popularity-bar-span-T10YIE" aria-hidden="true" class="popularity_bar_background">&nbsp;</span></span>
+      </div>
+  </td>
+  </tr>
+
+<tr class="series-pager-attr">
+
+<td colspan="2">
+      <div class="series-meta series-group-meta">
+  <span class="attributes">Percent, Not Seasonally Adjusted</span>
+  <br class="clear">
+  </div>
+  <div class="series-meta">
+    
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[44]" value="T10YIE" aria-labelledby="unitLinkT10YIE">
+      <a id="unitLinkT10YIE" aria-describedby="aria-target-T10YIE" class="pager-series-attributes-gtm" href="/series/T10YIE">
+    
+        Daily      
+  
+  </a>
+    <span id="aria-target-T10YIE" aria-label="From 2003-01-02 to 2024-06-28 1 day ago"
+        class="series-meta-dates">
+    2003-01-02
+   to
+
+    2024-06-28
+    
+    (1 day ago)
+    </span>
+    <br class="clear">
+  
+                                
+                
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[45]" value="T10YIEM" aria-labelledby="unitLinkT10YIEM">
+      <a id="unitLinkT10YIEM" aria-describedby="aria-target-T10YIEM" class="pager-series-attributes-gtm" href="/series/T10YIEM">
+    
+        Monthly      
+  
+  </a>
+    <span id="aria-target-T10YIEM" aria-label="From Jan 2003 to May 2024 Jun 3"
+        class="series-meta-dates">
+    Jan 2003
+   to
+
+    May 2024
+    
+    (Jun 3)
+    </span>
+    
+  </div>
+</td>
+</tr>
+<tr><td colspan="2" style="font-size:9px">&nbsp;</td></tr>
+
+                                
+                <tr class="series-pager-title">
+
+  <td valign="top" colspan="2">
+      <div class="display-results-title col-xs-12 col-sm-10">
+          <h3><a id="titleLink" href="/series/FPCPITOTLZGUSA" style="font-size:1.2em; padding-bottom: 2px" class="series-title pager-series-title-gtm">Inflation, consumer prices for the United States</a></h3>
+      </div>
+      <div class="display-results-popularity-bar d-none d-sm-block col-sm-2">
+        <span class="popularity-bar-span-parent" data-target="popularity-bar-span-FPCPITOTLZGUSA" tabindex="0" aria-label="popularity 85% popular" title="85% popular">
+       <span aria-hidden="true" style="padding-top: 3px; padding-left:51px;" class="popularity_bar">&nbsp;</span>       <span id="popularity-bar-span-FPCPITOTLZGUSA" aria-hidden="true" class="popularity_bar_background">&nbsp;</span></span>
+      </div>
+  </td>
+  </tr>
+
+<tr class="series-pager-attr">
+
+<td colspan="2">
+      <div class="series-meta series-group-single">
+  <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[46]" value="FPCPITOTLZGUSA">
+  <span class="attributes" style="width:350px;">Percent, Annual, Not Seasonally Adjusted</span><span class="series-meta-dates">1960 to 2022 (Dec 19)</span>
+  <br class="clear">
+  </div>
+    
+        <a id="unitLinkFPCPITOTLZGUSA" aria-describedby="aria-target-FPCPITOTLZGUSA" class="pager-series-attributes-gtm" href="/series/FPCPITOTLZGUSA">
+    
+  
+  
+  </a>
+      
+</td>
+</tr>
+<tr><td colspan="2" style="font-size:9px">&nbsp;</td></tr>
+
+                                
+                <tr class="series-pager-title">
+
+  <td valign="top" colspan="2">
+      <div class="display-results-title col-xs-12 col-sm-10">
+          <h3><a id="titleLink" href="/series/M1SL" style="font-size:1.2em; padding-bottom: 2px" class="series-title pager-series-title-gtm">M1</a></h3>
+      </div>
+      <div class="display-results-popularity-bar d-none d-sm-block col-sm-2">
+        <span class="popularity-bar-span-parent" data-target="popularity-bar-span-M1SL" tabindex="0" aria-label="popularity 85% popular" title="85% popular">
+       <span aria-hidden="true" style="padding-top: 3px; padding-left:51px;" class="popularity_bar">&nbsp;</span>       <span id="popularity-bar-span-M1SL" aria-hidden="true" class="popularity_bar_background">&nbsp;</span></span>
+      </div>
+  </td>
+  </tr>
+
+<tr class="series-pager-attr">
+
+<td colspan="2">
+      <div class="series-meta series-group-meta">
+  <span class="attributes">Billions of Dollars</span>
+  <br class="clear">
+  </div>
+  <div class="series-meta">
+    
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[47]" value="M1SL" aria-labelledby="unitLinkM1SL">
+      <a id="unitLinkM1SL" aria-describedby="aria-target-M1SL" class="pager-series-attributes-gtm" href="/series/M1SL">
+    
+        Monthly,       
+        Seasonally Adjusted 
+      
+  </a>
+    <span id="aria-target-M1SL" aria-label="From Jan 1959 to May 2024 5 days ago"
+        class="series-meta-dates">
+    Jan 1959
+   to
+
+    May 2024
+    
+    (5 days ago)
+    </span>
+    <br class="clear">
+  
+                                
+                
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[48]" value="WM1NS" aria-labelledby="unitLinkWM1NS">
+      <a id="unitLinkWM1NS" aria-describedby="aria-target-WM1NS" class="pager-series-attributes-gtm" href="/series/WM1NS">
+    
+        Weekly,       
+        Not Seasonally Adjusted 
+      
+  </a>
+    <span id="aria-target-WM1NS" aria-label="From 1975-01-06 to 2024-06-03 4 days ago"
+        class="series-meta-dates">
+    1975-01-06
+   to
+
+    2024-06-03
+    
+    (4 days ago)
+    </span>
+    <br class="clear">
+  
+                                
+                
+    <input class="pager-item-checkbox pager-check-series-gtm" type="checkbox" name="sids[49]" value="M1NS" aria-labelledby="unitLinkM1NS">
+      <a id="unitLinkM1NS" aria-describedby="aria-target-M1NS" class="pager-series-attributes-gtm" href="/series/M1NS">
+    
+        Monthly,       
+        Not Seasonally Adjusted 
+      
+  </a>
+    <span id="aria-target-M1NS" aria-label="From Jan 1959 to May 2024 5 days ago"
+        class="series-meta-dates">
+    Jan 1959
+   to
+
+    May 2024
+    
+    (5 days ago)
+    </span>
+    
+  </div>
+</td>
+</tr>
+<tr><td colspan="2" style="font-size:9px">&nbsp;</td></tr>
+
+                            </table>
+
+            <div class="series-pager-header" style="margin-top:.5em">
+                <input type="checkbox" class="select-all-checkboxes" aria-label="Select All Releases">
+                <button name="addseries2" class="series-fred-pager-btn btn btn-sm btn-default add-to-data-list-gtm">Add to Data List</button>
+                <button name="addgraph2" class="series-fred-pager-btn btn btn-sm btn-default add-to-graph-gtm">Add to Graph</button>
+                <span class="add-multiple-graphs-to-dashboard-btn-container"></span>
+                <div id="add-multiple-graphs-to-dashboard-modal-container"></div>
+            </div><!-- /series-pager-header  -->
+
+            <br>
+            <p style="text-align:right">&nbsp;<b>1</b>&nbsp;<a class="pager-link-gtm" href="https://fred.stlouisfed.org/tags/series?ob=pv&amp;t=&amp;et=&amp;pageID=2" title="page 2" aria-label="page 2">2</a>&nbsp;<a class="pager-link-gtm" href="https://fred.stlouisfed.org/tags/series?ob=pv&amp;t=&amp;et=&amp;pageID=3" title="page 3" aria-label="page 3">3</a>&nbsp;<a class="pager-link-gtm" href="https://fred.stlouisfed.org/tags/series?ob=pv&amp;t=&amp;et=&amp;pageID=4" title="page 4" aria-label="page 4">4</a>&nbsp;<a class="pager-link-gtm" href="https://fred.stlouisfed.org/tags/series?ob=pv&amp;t=&amp;et=&amp;pageID=5" title="page 5" aria-label="page 5">5</a>&nbsp;<a class="pager-link-gtm" href="https://fred.stlouisfed.org/tags/series?ob=pv&amp;t=&amp;et=&amp;pageID=6" title="page 6" aria-label="page 6">6</a>&nbsp;<a class="pager-link-gtm" href="https://fred.stlouisfed.org/tags/series?ob=pv&amp;t=&amp;et=&amp;pageID=2" title="next page" aria-label="next page">Next &raquo;</a>&nbsp;<a class="pager-link-gtm" href="https://fred.stlouisfed.org/tags/series?ob=pv&amp;t=&amp;et=&amp;pageID=30" title="last page" aria-label="last page">[30]</a></p>
+                        
+                    </div><!-- /panel-body -->
+    </form>
+</div><!-- /container -->
+
+</div>
+
+                        <button disabled
+                id="filter-button"
+                class="drawer-dropdown-trigger filter-tags-btn btn affix btn-block btn-default dropdown-is-active"><i
+                class="fa fa-filter" style="padding-right:5px;"></i>Filter <span
+                class="badge badge-primary hidden">0</span></button>
+                    </div>
+            
+    <link href=/css/1719514932.footer.min.css rel="stylesheet" media="all">
+    <script></script>
+    <style>
+    .h2-508 {
+        font-size: 1em !important;
+        margin-top: 2px !important;
+        margin-bottom: 2px !important
+    }
+</style>
+
+<br class="clear">
+</div>
+
+<div class="footer2 hidden-print row EL-footer2" style="padding-top: 20px;">
+    <div class="col-12 col-md-3">
+        <h3>Need Help?</h3>
+        <div>
+            <a class="footer-questions-gtm" href="//fred.stlouisfed.org/contactus/" class="q-and-a-link-gtm">Questions or
+                Comments</a>
+        </div>
+        <div style="padding: 10px 0 20px 0;">
+            <a class="footer-fredhelp-gtm" href="//fredhelp.stlouisfed.org/">FRED Help</a>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6">
+        <div class="col-12">
+            <h3>Subscribe to the FRED newsletter</h3>
+            <form id="subscribe-div" class="form-horizontal form-control newsletter-form" style="padding:0;margin:0">
+                <div class="col-12" style="padding-left: 0;">
+                    <div class="input-group">
+                        <input id="subscribe-email-input" type="text" name="email" placeholder="Email"
+                            class="form-control email" style="padding: 4px 0px 4px 14px;" aria-label="email">
+                        <button id="subscribe-email-btn" type="button"
+                            class="btn btn-default subscribe-newsletter-btn-gtm"
+                            style="color: #333; border-radius: 4px; border-color: #cccccc; padding: 0 7px 0px 7px; font-size: 14px;">Subscribe</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <hr class="d-md-none" style="border: none;">
+    <div class="col-12 col-md-3">
+        <h3 style="width: 100%; text-align: center;">Follow us</h3>
+        <div class="col-12" style="text-align: center;">
+            <a aria-label="Saint Louis Fed X page" href="http://bit.ly/9ngC3L"><img class="x-logo" src="//fred.stlouisfed.org/images/x-logo.svg"></a>
+            <a aria-label="Saint Louis Fed facebook page" href="https://www.facebook.com/stlfed"><i
+                    class="fab fa-fw fa-2x fa-facebook"></i> </a>
+            <a aria-label="Saint Louis Fed youtube page" href="http://bit.ly/aY9TVF"><i
+                    class="fab fa-fw fa-2x fa-youtube"></i></a>
+            <a aria-label="Saint Louis Fed linkedin page" href="http://bit.ly/d056zL"><i
+                    class="fab fa-fw fa-2x fa-linkedin"></i></a>
+        </div>
+    </div>
+</div>
+
+<div class="hidden-print d-md-none">
+    <a style="margin: 5px; display: block; padding:5px 10px; text-align: center" href="#top">Back to Top</a>
+</div>
+
+<div id="footer-bottom" class="row EL-footer-bottom">
+    <div id="address" class="col-12 col-md-8 d-none d-sm-block">
+        Federal Reserve Bank of St. Louis,
+        One Federal Reserve Bank Plaza,
+        St. Louis, MO 63102
+    </div>
+    <div id="legal-and-privacy" class="col-12 col-md-4 d-none d-sm-block">
+        <a class="me-4 footer-link" href="//fred.stlouisfed.org/legal/">Legal</a>
+        <a class="footer-link" href="//research.stlouisfed.org/privacy.html">Privacy Notice & Policy</a>
+    </div>
+    <div class="col-12 d-block d-sm-none text-center">
+        <div>Federal Reserve Bank of St. Louis, One Federal Reserve Bank Plaza, St. Louis, MO 63102</div>
+        <div class="mt-3 footer-link"><a href="//fred.stlouisfed.org/legal/">Legal</a></div>
+        <div class="mt-3 footer-link"><a href="//research.stlouisfed.org/privacy.html">Privacy Notice & Policy</a></div>
+    </div>
+</div>
+
+<script>
+    // function to parse cookies, and return the value
+    function getCookie(name) {
+        var cookies = document.cookie.split(';');
+        for (var i in cookies) {
+            var cookie = cookies[i].trim().split('=');
+            if (cookie[0] == name) {
+                return cookie[1];
+            }
+        }
+        return null;
+    }
+    // certain pages in FRED set a custom tag variable
+    // this gets sent to Google Analytics so we can see what tags people are using
+    if (window.tags) {
+        dataLayer.push({ 'tags': tags });
+
+    }
+
+    // if the user is logged in, send the value of the liruid cookie to Google Analytics
+    var researchLiruid = getCookie('research-liruid');
+    dataLayer.push({ 'userId': researchLiruid });
+
+</script>
+<script src="//fred.stlouisfed.org/assets/jquery/dist/1709058721.jquery.min.js" type="text/javascript"></script>
+<script src="//fred.stlouisfed.org/assets/popperjs/dist/umd/1709058722.popper.min.js"></script>
+<script src="//fred.stlouisfed.org/assets/bootstrap/dist/js/1713537010.bootstrap.min.js"></script>
+<script src="//fred.stlouisfed.org/assets/select2/dist/js/1686149278.select2.full.min.js"></script>
+<script>
+    // force expire the .fred.stlouisfed.org _ga cookie
+    document.cookie = document.cookie + '_ga=;domain=.fred.stlouisfed.org;expires=Sat, 01-Jan-2000 00:00:00 GMT';
+</script>
+
+<script defer src="//fred.stlouisfed.org/assets/jquery-menu-aim/1719514930.jquery.menu-aim.min.js"></script>
+
+<script src="//fred.stlouisfed.org/js/1719514931.common.min.js"></script>
+
+<script src="//fred.stlouisfed.org/assets/js-cookie/src/js.cookie.js"></script>
+<script src="//fred.stlouisfed.org/js/1719514929.508.min.js"></script>
+
+<script>
+    var appConfig = {
+        uapi_host: 'https://fred.stlouisfed.org/uapi',
+        research_host: 'https://research.stlouisfed.org',
+        fred_host: 'https://fred.stlouisfed.org',
+        alfred_host: 'https://alfred.stlouisfed.org',
+        gsi_client_id: '115290014367-vpb89b600koe9kn0njeeq38c1unfr3gk.apps.googleusercontent.com',
+        fred_account_host: 'https://fredaccount.stlouisfed.org',
+    };
+
+    var domain_suffix = (window.location.hostname.split(".")[0].split("-")[1] || '');
+    appConfig.logged_in = Cookies.get('research-lirua' + (domain_suffix ? '-' + domain_suffix : '')) !== null && Cookies.get('research-lirua' + (domain_suffix ? '-' + domain_suffix : '')) !== undefined;
+    var getAuth = function (callback) {
+        if (typeof callback === 'function') {
+            callback();
+        }
+        return;
+    };
+    window.getAuth = getAuth;
+
+</script>
+<script defer src="//fred.stlouisfed.org/js/1711050338.banner.js"></script>
+<script src="//accounts.google.com/gsi/client" async defer></script>
+<script src="//fred.stlouisfed.org/assets/research/fred-account-react/dist/1717602087.main.dist.js"></script>
+<script src="//fred.stlouisfed.org/assets/research/fred-account-react/dist/1717602087.vendor.dist.js"></script>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", function () {
+        $(document).ready(function () {
+            // handle tabbing into and out of the subscribe text box
+            $('#subscribe-email-input').on('focusout', function () {
+                $(this).css('outline-color', 'white');
+            });
+
+            $('#subscribe-email-input').on('keyup', function (e) {
+                if (e.key == 'Tab') { // tab into search input
+                    $('#subscribe-email-input').css({ 'outline-color': '#364E71' });
+                }
+            });
+
+
+        });
+    });
+</script>
+    <link href=/css/1719514932.contact.min.css rel="stylesheet" media="(min-width: 767px)">
+    <script></script>
+    </div>
+<script type="text/javascript">
+ var request_order = 0;
+ var tmp = 0;
+ var max_related_tags = 10;
+ $('#tags-related-search-form').on('keyup change', function(event) {
+     display_related_tags(event);
+ });
+
+ $('#tag-search-view-all').on('keypress', function(event) {
+     if (event.keyCode == 13) {
+         event.preventDefault();
+     }
+ });
+
+ $(function() {
+    if ($('body').hasClass('series-pager')){
+        display_related_tags();
+    }
+    $('.exclude-tag-check').on('change', function() {
+        $('.modal-message').addClass('hidden');
+        $('#exclude-button').prop('disabled', false);
+        if ( $("#excludeModal input[type='checkbox']").length ==  $("#excludeModal input[type='checkbox']:checked").length)
+        {
+            $('.modal-message').html('<p>You cannot exclude all these filters. Please remove one.</p>');
+            $('.modal-message').removeClass('hidden');
+            $('#exclude-button').prop('disabled', true);
+        }
+    });
+
+
+    /***** Sort dropdown *****/
+    $('#order_by_options-dropdown li a').on('click', function(e) {
+      e.preventDefault();
+      if (!$(this).parent().hasClass('go-back')){
+        var order_by_form = $('#tags-related-search-form');
+        order_by_form.find("input[name='ob']").val($(this).data('order-by'));
+        order_by_form.find("input[name='od']").val(null);
+        order_by_form.find("input[name='pageID']").val(1);
+        order_by_form.submit();
+      }
+    });
+
+    var current_sort = $("input[name='ob']").val();
+    $('.sort-checked').html('');
+    if (!current_sort)
+            current_sort = "pv";
+    $(".sort-checked-"+current_sort).html('<i class="fa fa-check" aria-hidden="true"></i>');
+    var orderByText = $('#order-by-btn').text();
+    $('#sort-by-text').text(orderByText.replace("Sort by",''));
+
+    
+    /***** VIEW ALL MODAL *****/
+    $('#viewallModal').on('hide.bs.modal', function () {
+        $('.alpha .alphabet button').removeClass('active');
+        $('.alpha .alphabet button').removeClass('disabled');
+        $(this).removeData('bs.modal');
+    });
+    $('body').on('hidden.bs.modal', '.viewallModal', function () {
+        $(this).removeData('bs.modal');
+    });
+   
+    $('#viewallModal').on('show.bs.modal', function(e) {
+        $('#tags-related-search-form').find("input[name='tt']").val('');
+        $('#viewallModal .modal-header .modal-title').html('Loading Filters ....');
+        $('#viewallModal #tag-search-view-all').val('');
+        $('.modal-tag-list').html('');
+        $('.alpha .alphabet button').removeClass('active');
+        $('.alpha .alphabet button').removeClass('disabled');
+        $('.form-control-clear').addClass('hidden');
+
+        var group = $(e.relatedTarget).data('group');
+        $('#tags-related-search-form').find("input[name='tg']").val(group);
+        var ajaxurl = document.location.toString().replace(/\?.*/, "");
+        ajaxurl += '?'+$('#tags-related-search-form').serialize()+'&to=tag&viewall=1&request_order='+request_order+'&rts=1&ts='+Math.random().toString(36).substr(2, 5);
+        var jqxhr = $.getJSON(ajaxurl, function(json) {
+            parseTags(json,true);
+        });
+    });
+
+    $('#tag-search-view-all').on('keyup', function(event) {
+        $('.modal-tag-list').html('');
+        var tag_search = $('#tag-search-view-all').val();
+        var group = $('#viewallModal .modal-header .modal-title').attr('id');
+        var ajaxurl = document.location.toString().replace(/\?.*/, "");
+        $('#tags-related-search-form').find("input[name='tg']").val(group);
+        $('#tags-related-search-form').find("input[name='tt']").val(tag_search);
+        ajaxurl += '?'+$('#tags-related-search-form').serialize()+'&to=tag&request_order='+request_order+'&rts=1';
+           var jqxhr = $.getJSON(ajaxurl, function(json) {
+           if (json.some_related_tags != 'false') {
+               parseTags(json,true, true);
+           }
+         });
+
+    });
+    $('.has-clear input[type="text"]').on('input propertychange', function() {
+    var $this = $(this);
+    var visible = Boolean($this.val());
+    $this.siblings('.form-control-clear').toggleClass('hidden', !visible);
+    }).trigger('propertychange');
+
+    $('.form-control-clear').on('click', function() {
+        $(this).siblings('input[type="text"]').val('')
+            .trigger('propertychange').focus();
+            var group = $('#viewallModal .modal-header .modal-title').attr('id');
+            $('#tags-related-search-form').find("input[name='tg']").val(group);
+            $('#tags-related-search-form').find("input[name='tt']").val('');
+                
+            var ajaxurl = document.location.toString().replace(/\?.*/, "");
+            ajaxurl += '?'+$('#tags-related-search-form').serialize()+'&request_order='+request_order+'&rts=1&ts='+Math.random().toString(36).substr(2, 5);
+            var jqxhr = $.getJSON(ajaxurl, function(json) {
+                $('.form-control-clear').addClass('hidden');
+                parseTags(json,true,false);
+            });
+     });
+
+    /***** Helper function to get results *****/
+
+    function getResults(isSearch)
+    {
+       var ajaxurl = document.location.toString().replace(/\?.*/, "");
+           ajaxurl += '?'+$('#tags-related-search-form').serialize()+'&request_order='+request_order+'&rts=1';
+        var jqxhr = $.getJSON(ajaxurl, function(json) {
+              parseTags(json,true,isSearch);
+            });
+     }
+    
+    /***** Clicked a alpha letter filter in view all modal *****/
+  function filterResults(letter){
+        $('.tag-block').hide();
+        $('.modal-tag-list .tag-name').filter(function() {
+        var firstChar = $(this).text().charAt(0).toUpperCase();
+        if (firstChar >= '0' && firstChar <= '9')
+            firstChar = "#";
+            return firstChar === letter;
+        }).closest('.tag-block').show();
+    }
+
+    $('.btn-toolbar button').on('click',function(){
+        var letter = $(this).text();
+        $('.btn-default').removeClass('active');
+        $(this).addClass('active');
+        filterResults(letter);
+    });
+
+    /***** Clicked a Exclude button in exclude modal *****/
+     $('#exclude-button').on('click', function() {
+        $(this).addClass("loading");
+        $(this).removeClass("btn-primary");
+
+         var included = [], excluded = [];
+         $(".exclude-tag-check").each(function () {
+             if ($(this).is(':checked')) {
+                 excluded.push($(this).val());
+             } else {
+                 included.push($(this).val());
+             }
+    });
+
+     var queryParameters = {}, queryString = location.search.substring(1), re = /([^&=]+)=([^&]*)/g, m;
+     while (m = re.exec(queryString)) {
+         queryParameters[decodeURIComponent(m[1])] = decodeURIComponent(m[2]);
+     }
+
+     queryParameters['t'] = included.join(';');
+     queryParameters['et'] = excluded.join(';');
+     $('#tags-related-search-form').find("input[name='t']").val(included.join(';'));
+     $('#tags-related-search-form').find("input[name='et']").val(excluded.join(';'));
+
+     get_tags('clicked');
+});
+
+ function get_tags(isClicked) {
+
+     var getUrlParameter = function getUrlParameter(sParam) {
+     var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+         sURLVariables = sPageURL.split('&'),
+         sParameterName,
+         i;
+
+         for (i = 0; i < sURLVariables.length; i++) {
+             sParameterName = sURLVariables[i].split('=');
+
+             if (sParameterName[0] === sParam) {
+                 return sParameterName[1] === undefined ? true : sParameterName[1];
+             }
+            }
+        };
+     $.ajax({
+         url: document.location.toString().replace(/\?.*/, ""),
+         datatype: 'json',
+         data: $('#tags-related-search-form').serialize()+'&request_order='+request_order+'&rts=1',
+         success: function(data) {
+            var data = JSON.parse(data);
+            if ((data) && request_order != data.request_order) {
+                return false;
+            }
+            if (isClicked)
+            {
+                $('#exclude-button').addClass("hide-loading");
+                $(".done").addClass("finish");
+            }
+            var queryParameters = {}, queryString = location.search.substring(1), re = /([^&=]+)=([^&]*)/g, m;
+            while (m = re.exec(queryString)) {
+              queryParameters[decodeURIComponent(m[1])] = decodeURIComponent(m[2]);
+            }
+             if ((isClicked == 'clicked') &&
+                (data.some_related_tags == 'false') &&
+                ($('#tags-related-search-form').find("input[name='et']").val())) {
+                queryParameters['t'] = $('#tags-related-search-form').find("input[name='t']").val()+';'+$('#tags-related-search-form').find("input[name='et']").val();
+                queryParameters['no_result'] = 'true';
+                location.search = $.param(queryParameters);
+            }
+            else {
+                if(getUrlParameter('no_result') == 'true') {
+                    $('.message-container').html('<p class="red alert alert-danger">Filtering returned no results, filters have been reset</p>');
+                }
+                if (isClicked == 'clicked') {
+                    queryParameters['t'] = $('#tags-related-search-form').find("input[name='t']").val();
+                    queryParameters['et'] = $('#tags-related-search-form').find("input[name='et']").val();
+                    queryParameters['st'] = $('#tags-related-search-form').find("input[name='st']").val();
+                    location.search = $.param(queryParameters);
+                }
+                parseTags(data);
+            }
+          }
+     });
+
+ }
+
+
+ function display_related_tags(event) {
+
+     if (!$('#tags-related-search-form').length) {
+
+     }
+
+     if ((event === undefined) ||
+         (event.type != 'keyup')) {
+         request_order = 0;
+     } else {
+         request_order++;
+     }
+
+     if (tmp > 0) {
+         clearTimeout(tmp);
+     }
+
+     get_tags();
+
+     return false;
+ }
+
+/****** function that parses the json returned from ajax call into markup for views ****/
+ function parseTags(jsonData, viewall, isSearch)
+ {
+    if ((typeof viewall) == 'undefined') {
+        viewall = false;
+    }
+    if ((typeof isSearch) == 'undefined') {
+        isSearch = false;
+    }
+    if ((jsonData.related_tags === null) || ((typeof jsonData.related_tags) == 'undefined')) {
+        return false;
+    }
+    Object.keys(jsonData.related_tags).forEach(function(key) {
+        var tagGroupArray = jsonData.related_tags[key];
+        var tags=[];
+        var groupName=key;
+        var alpha ={};
+        var onetag='';
+        var capTag='';
+        for (i=0;i < tagGroupArray.length; i++)
+        {
+            capTag = (tagGroupArray[i].notes) ? tagGroupArray[i].notes : tagGroupArray[i].capitalized_tag;
+            var addtl_info = 'data-bs-toggle="popover" title="Popover Header" data-content="Some content inside the popover"';
+            onetag = '<a href="'+tagGroupArray[i].url+'" class="list-group-item clear add-tag-gtm" id="'+capTag+'" aria-label="'+capTag+' filter '+tagGroupArray[i].series_count+' records">'+
+                '<span style="width: 70%;" class="float-start tag-name col-9-xs add-tag-gtm">'+capTag +'</span>'+
+                '<b style="width: 30%;" class="float-start col-3-xs add-tag-gtm">'+
+                ((tagGroupArray[i].series_count != 0) ?
+                  '<span class="tag-count add-tag-gtm"> ('+tagGroupArray[i].series_count+')</span>' :
+                   '') +
+                '</b></a>';
+            tags.push(onetag);
+            groupName = tagGroupArray[i].group_name;
+        }
+        if (viewall)
+        {
+            createViewAllModal(tags,groupName, key, isSearch);
+        }
+        else
+        {
+            createSidePanelGroup(tags,groupName,key);
+            createDrawerGroup(tags,groupName,key);
+        }
+    });
+ }
+
+ /**** functions to display the appropriate content(drawer, sidepanel, view all modal)  ****/
+ function createDrawerGroup(tags,group,groupAbbr)
+ {
+    var drawerBlock = $('.tag-drawer-group-item').clone();
+    drawerBlock.removeClass('hidden');
+    drawerBlock.removeClass('tag-drawer-group-item');
+    drawerBlock.find('.group-tag-name').text(group);
+    drawerBlock.find('.group-tag-name-all').text("View All "+group);
+    drawerBlock.find('.group-tag-name-all').attr("data-group",groupAbbr);
+    var onetag = '<li class="has-children-no">'+tags.join('</li><li class="has-children-no">')+'</li>';
+    $(drawerBlock).insertBefore(".need-help-seperator");
+    $(onetag).insertAfter(drawerBlock.find('.see-all'));
+    $('.drawer-dropdown-trigger').prop("disabled", false);
+    $('.drawer-dropdown-trigger span.badge').removeClass('visually-hidden');
+    $('.drawer-dropdown-trigger span.badge').text($('.selected-count').text());
+    if (tags.length <= 5)
+        drawerBlock.find('.see-all').addClass('hidden');
+ }
+function createSidePanelGroup(tags,group,groupAbbr)
+{
+    var panel = $('.panel-group-default').clone();
+    $('.panel-filter-header').removeClass('hidden');
+    panel.removeClass('hidden');
+    panel.find('.group-tag-name').text(group);
+    panel.find('.group-tag-name').attr('aria-label',group);
+    panel.find('.view-all-tags').data("group",groupAbbr);
+    panel.find('.view-all-tags').attr('data-group',groupAbbr);
+    panel.find('.group-tag-list').html(tags.join("\n"));
+    if (tags.length > 5)
+        panel.find('.view-all-tags').removeClass('hidden');
+    $('#related-tags').html($('#related-tags').html()+panel.html());
+}
+function createViewAllModal(tags,groupName, groupAbbr, isSearch)
+{
+$('.modal-tag-list').html('');
+    $('#viewallModal .modal-header .modal-title').html('View All '+groupName);
+    $('#viewallModal .modal-header .modal-title').attr('id', groupAbbr);
+    $('.modal-tag-list').html('<div class="col-4 tag-block">'+tags.join('</div><div class="col-4 tag-block">')+'</div>');
+    if (isSearch !== true){
+        var $p = $('.modal-tag-list .tag-name');
+        $('.btn-toolbar button').addClass(function(){
+            var a = this.textContent;
+            return $p.filter(function(){
+            var firstChar = this.textContent.charAt(0);
+            if (firstChar >= '0' && firstChar <= '9')
+            {
+                firstChar = "#";
+            }
+                return firstChar === a;
+            }).length ? '' : 'disabled';
+        });
+
+    }
+    $('.alpha .alphabet button').removeClass('active');    
+    if (tags.length >= 30)
+    {
+        var firstCharacterWithResults = $('.alpha .alphabet button:not(".disabled"):first');
+        firstCharacterWithResults.addClass('active');
+        filterResults(firstCharacterWithResults.text());
+    }    
+}
+});
+ function show_more_related_tags() {
+     $('.related-tags-group').each(function() {
+         if ($(this).find('li').length > max_related_tags) {
+             $(this).find('li:gt(' + (max_related_tags - 1) + ')').hide();
+             $(this).append('<p align="right"><a href="#" class="related-tags-group-show-more">Show More</a><p>');
+             $('.related-tags-group-show-more').on('click', function() {
+                 $(this).closest('.related-tags-group').find('li:gt(' + (max_related_tags - 1) + ')').show('slide',{'direction':'up'});
+                 $(this).remove();
+                 return false;
+             });
+         }
+     });
+ }
+
+ $(document).ready(function (){
+     $("div.series-group-single").parent().find("a.pager-series-attributes-gtm").attr("tabindex", "-1");
+     $('[data-order-by="sa"]').attr('aria-label', 'seasonally adjusted');
+ })
+
+</script>
+
+</body>
+</html>
+
+

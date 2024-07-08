@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test select-dataset-external Route</title>
+</head>
+<body>
+    <h1>Test select-dataset-external Route</h1>
+    <label for="queryInput">Query:</label>
+    <input type="text" id="queryInput" placeholder="Enter your query">
+    <button id="testButton">Test select-dataset-external Route</button>
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('testButton').addEventListener('click', () => {
+            const queryInput = {
+                query: document.getElementById('queryInput').value
+            };
+
+            fetch('https://sgdataproject-microservice.onrender.com/select-dataset-external', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(queryInput)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => {
+                document.getElementById('result').innerText = JSON.stringify(data, null, 2);
+            })
+            .catch(error => {
+                document.getElementById('result').innerText = 'Error: ' + error;
+            });
+        });
+    </script>
+</body>
+</html>
