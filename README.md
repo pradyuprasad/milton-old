@@ -1,4 +1,10 @@
-This is my project to automatically analyse Singapore's economic data using LLMs. The basic idea is simple: type in a query, and the machine does everything for you and gives you an answer with a chart. You can ask a
+This is my project to automatically analyse Singapore's economic data using LLMs. The basic idea is simple: type in a query, and the machine does everything for you and gives you an answer with a chart. You perform the following queries
+- Ask the model which datasets would give you answer about your question
+- Ask the model questions about
+  * the whole economy
+  * any specific sector of the economy
+  * to compare any sectors of the economy
+- Ask it any question, let it pick the correct dataset by itself, and answer your question
 
 # Usage
 You can view the project at deployment link [here](https://sgdataproject-frontend.onrender.com/). Alternatively, you can download it and run the backend by doing
@@ -40,4 +46,37 @@ For inflation, it picks the right sector, then the subsector, and specific produ
 I prompt the model with the schema of the SQLite dataset the metadata was downloaded to and prompt it to generate a SQLite query which selects a range of relevant datasets. For example, if the user asks "What is the current unemployment rate", the model would generate the query "SELECT * from datasets where type='Unemployment' and level = 'TotalEconomy'". This provides us with all datasets passed to the AI planning module, which will later select the correct ones.
 
 ### AI code writing agent
+This is the main part of the website. I prompt Llama 3 with the schema of each dataset (for example the date format, and the values of GDP, Consumer Price Index, Unemployment rate), and ask it to generate a plan of how to write python code that answers the user's question. This plan is logged and printed to the terminal, and then the plan is passed on to the next step
 
+Then this plan along with some specific errors to avoid are passed along to GPT-4o (these errors in code were discovered by experimentation) which writes code. I use Llama3-8b to remove all non-code details from the code, and run this in a python script. The model is prompted to not plot anything and print a single line answer that is passed on to the user. If the script runs without any error, the output is presented to the user. If there is an error, the model is prompted to fix it with the error and rewrite the code. This is run a maximum of five times to avoid cost overruns and hallucinations. 
+
+Then the respective CSV is converted to a JSON format and added to the answer sent to the frontend.
+
+This is the core AI code writing feature used for the microservice.
+
+## Backend
+
+I have written the backend using FastAPI. There are a few endpoints listed below
+1. select-dataset-external. This uses the huggingFace 0shot selector to select the data and returns the data separated by confidence or not.
+2. select-datapoints-sector. This takes in three things: a sector which is validated against a hashset of correct sectors (and a 400 is returned otherwise), the category (inflation or unemployment), and an optional query. If there is no query, then a default query to return the latest data is given
+3. compare-between-specific-sectors. This endpoint is similar to the previous one except that two sectors are given and the model is prompted to return the difference in inflation rate / GDP growth for the sectors
+4. ask-anything. This endpoint calls a function that does both dataset classification (from the first feature), and the answer questions about a sector (from the second feature). 
+
+The first endpoint returns a list of datasets we are confident that will help the user, and a list that may or may not. All the other endpoints return a JSON with
+
+1. a flag variable working to indicate if the response is successful or not
+2. an answer which has the model answer
+3. a list of key value pairs (with date and value respectively) which are the datapoints to graph
+
+## Frontend
+At the moment, the frontend doesn't use any framework and is written in raw HTML, CSS and JavaScript. It uses d3.js for rendering the charts. 
+
+I offer the below practices on the frontend
+1. Selecting the dataset. The user is given a text box and then the confident datasets, are displayed in a line along with the non-confident datasets
+2. Ask questions about the whole economy . The user can pick which category of the economy they want to include (inflation, Unemployment or GDP) and the user can ask a question about that
+3. Compare between sectors. This allows users to pick the sectors they want to compare using a number of buttons. In the case of the user picking less than two, the user is given an alert to pick at least two.
+4. Ask question about a specific sector. This allows users to pick one specific sector and ask questions about its inflation or GDP growth
+5. Ask anything: as mentioned above, this combines the select dataset and the ask questions about sector
+
+
+The datapoints to the backend are rendered using d3.js as a line graph. 
