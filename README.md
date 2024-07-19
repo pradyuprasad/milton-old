@@ -1,4 +1,4 @@
-This is my project to automatically analyse Singapore's economic data using LLMs. The basic idea is simple: type in a query, and the machine does everything for you and gives you an answer with a chart. You perform the following queries
+This is my project to automatically analyse Singapore's economic data using LLMs. The basic idea is simple: type in a query, and the machine does everything for you and gives you an answer with a chart. You can perform the following queries
 - Ask the model which datasets would give you answer about your question
 - Ask the model questions about
   * the whole economy
@@ -7,7 +7,7 @@ This is my project to automatically analyse Singapore's economic data using LLMs
 - Ask it any question, let it pick the correct dataset by itself, and answer your question
 
 # Usage
-You can view the project at deployment link [here](https://sgdataproject-frontend.onrender.com/). Alternatively, you can download it and run the backend by doing
+You can view the project at deployment link [here](https://sgdataproject-frontend.onrender.com/). Alternatively, you can clone it and run the backend by doing
 
 ```
 export PORT=10000
