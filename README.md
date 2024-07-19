@@ -9,7 +9,7 @@ uvicorn src.microservice.main:app --host 0.0.0.0 --port $PORT
 ```
 
 # Example screenshots
-[image](image/example.jpeg)
+[image](image/example.jpg)
 
 # How it works
 There are four parts to this  
