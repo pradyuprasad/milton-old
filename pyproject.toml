@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "sgdataproject"
+name = "EconDataGPT"
 version = "0.1.0"
-description = "LLM-based data analysis agent for SG public data"
-authors = ["Your Name <you@example.com>"]
+description = "Automated macroeconomic analysis agent"
+authors = ["Pradyumna <you@example.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
@@ -28,7 +28,6 @@ pipreqs = {version = "^0.5.0", python = ">=3.8.1,<3.13"}
 instructor = "^1.3.3"
 gunicorn = "^22.0.0"
 
-
 [tool.poetry.group.dev.dependencies]
 pip-check-reqs = "^2.5.3"
 pipdeptree = "^2.23.0"
@@ -36,3 +35,4 @@ pipdeptree = "^2.23.0"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
