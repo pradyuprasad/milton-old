@@ -2,6 +2,7 @@ import os
 import requests
 import sqlite3
 from dotenv import load_dotenv
+from tqdm import tqdm
 
 # Load API key from environment
 load_dotenv()
@@ -280,7 +281,6 @@ def store_tags_and_relationships(series_id, tags, conn):
             INSERT OR REPLACE INTO series_tags (series_id, tag_id)
             VALUES ((SELECT id FROM series WHERE fred_id = ?), ?)
         ''', (series_id, tag_id))
-        print("done with series", series_id, " and tag ", tag_id)
     conn.commit()
 
 # Main function to fetch and store tags, series, and their relationships
@@ -318,14 +318,17 @@ def main():
         # Fetch and store tags for each series
         c.execute('SELECT fred_id FROM series')
         series_ids = c.fetchall()
+        total_series = len(series_ids)
+        with tqdm(total=total_series, desc=f"Processing series for tag '{tag_name}'") as pbar:
 
-        for series_id in series_ids:
-            
-            series_id = series_id[0]
-            tags = fetch_tags_for_series(FRED_API_KEY, series_id)
-            if tags:
-                print(f"Fetched {len(tags)} tags for series '{series_id}'")
-                store_tags_and_relationships(series_id, tags, conn)
+            for series_id in series_ids:
+                
+                series_id = series_id[0]
+                tags = fetch_tags_for_series(FRED_API_KEY, series_id)
+                if tags:
+                    print(f"Fetched {len(tags)} tags for series '{series_id}'")
+                    store_tags_and_relationships(series_id, tags, conn)
+                pbar.update(1)
         
         c.execute("SELECT count(id)  from series")
         value = c.fetchone()[0]
