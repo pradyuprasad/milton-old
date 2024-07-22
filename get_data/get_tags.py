@@ -12,7 +12,7 @@ conn = sqlite3.connect('allData.db')
 c = conn.cursor()
 
 # Fetch all tags sorted by popularity
-def fetch_tags(api_key, limit=1000, offset=0):
+def fetch_tags(api_key, limit=100, offset=0):
     url = "https://api.stlouisfed.org/fred/tags"
     print("called with offset", offset)
     params = {
@@ -37,22 +37,20 @@ def store_tags(tags, conn):
     c = conn.cursor()
     for tag in tags:
         c.execute('''
-            INSERT OR IGNORE INTO tags (fred_id, name, group_id, notes, created, popularity, series_count)
+            INSERT OR REPLACE INTO tags (fred_id, name, group_id, notes, created, popularity, series_count)
             VALUES (?, ?, ?, ?, ?, ?, ?)
         ''', (tag['name'], tag['name'], tag['group_id'], tag['notes'], tag['created'], tag['popularity'], tag['series_count']))
     conn.commit()
 
-# Main function to fetch and store all tags
+# Main function to fetch and store the top 100 tags
 def main():
     offset = 0
-    limit = 1000
+    limit = 100  # Since we only want the top 100 tags, we set the limit to 100
     tags = fetch_tags(FRED_API_KEY, limit, offset)
 
-    while tags:
+    if tags:
         store_tags(tags, conn)
         print(f"{offset} insert is done")
-        offset += limit
-        tags = fetch_tags(FRED_API_KEY, limit, offset)
 
 if __name__ == "__main__":
     main()
