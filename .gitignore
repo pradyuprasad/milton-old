@@ -16,3 +16,4 @@ src/LLMGenCode
 *.csv
 !data/*.csv
 LLMGenCode/
+fred/chroma_db/
