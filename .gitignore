@@ -13,3 +13,7 @@ dataset-metadata-client_wal_index
 dataset-metadata-shm
 dataset-metadata-wal
 src/LLMGenCode
+*.csv
+!data/*.csv
+LLMGenCode/
+fred/chroma_db/
