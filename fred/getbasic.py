@@ -3,6 +3,7 @@ import requests
 import sqlite3
 from dotenv import load_dotenv
 from tqdm import tqdm
+from .database_ops import create_tables
 
 # Load API key from environment
 load_dotenv()

@@ -24,3 +24,13 @@ class DateValuePair(BaseModel):
 class SeriesData(BaseModel):
     units: str
     ObservationsData: List[DateValuePair]
+
+class SeriesForSearch(BaseModel):
+    fred_id:str
+    title:str
+    units:str
+    popularity: int
+    relevance_lower_better: float
+
+    class Config:
+        frozen = True
