@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "EconDataGPT"
+name = "Milton"
 version = "0.1.0"
 description = "Automated macroeconomic analysis agent"
 authors = ["Pradyumna <you@example.com>"]

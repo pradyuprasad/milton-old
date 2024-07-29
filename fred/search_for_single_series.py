@@ -6,17 +6,15 @@ from pydantic import BaseModel
 from .config import config, APIKeyNotFoundError
 from openai import OpenAI
 from groq import Groq
-from .models import SeriesForSearch
+from .models import SeriesForSearch, SeriesForRanking
 from .database import Database, DatabaseConnectionError
-chroma_client_temp = chromadb.Client()
-series_collection = chroma_client_temp.create_collection(name="temp_series_collection")
+os.environ['TOKENIZERS_PARALLELISM'] = 'false'
 
 print("Imported libraries")
 
 # Initialize Chroma client with persistent storage
 chroma_persist_directory = os.path.join(os.path.dirname(__file__), "chroma_db")
 chroma_client = chromadb.PersistentClient(path=chroma_persist_directory)
-
     
 # Get the collection
 collection = chroma_client.get_collection("fred-economic-series")
@@ -25,14 +23,21 @@ collection = chroma_client.get_collection("fred-economic-series")
 class Keywords(BaseModel):
     word: List[str]
 
+class ClassifiedSeries(BaseModel):
+    relevant: List[SeriesForSearch]
+    notRelevant: List[SeriesForSearch]
+
 try:
     FRED_API_KEY = config.get_api_key('FRED_API_KEY')
     OPENAI_API_KEY = config.get_api_key("OPENAI_API_KEY")
     openai_client = OpenAI(api_key=OPENAI_API_KEY)
     client = Groq(api_key=config.get_api_key("GROQ_API_KEY"))
     instructor_client = instructor.from_openai(OpenAI(api_key=OPENAI_API_KEY))
+    instructor_groq_client = instructor.from_groq(Groq(api_key=config.get_api_key("GROQ_API_KEY")))
 except APIKeyNotFoundError as e:
     raise e
+
+
 
 def extract_keyword(user_query: str) -> Keywords:
     return instructor_client.chat.completions.create(
@@ -57,20 +62,42 @@ Respond with only the list of search terms, nothing else.
         ]
     )
 
-def search_series_by_keyword(keywords: List[str], n_results: int = 5, query:str = None) -> Set[SeriesForSearch]:
-    if not query:
-        query = " ".join(keywords)
-    results = collection.query(
-        query_texts=[query],
-        n_results=n_results
-    )
+def keyword_semantic_search(keywords: List[str], n_results: int = 5, verbose:bool = False) -> Set[SeriesForSearch]:
 
-    series_list = set()
-    for i in range(len(results['ids'][0])):
-        series = SeriesForSearch(fred_id=results['ids'][0][i], title=results['metadatas'][0][i]['title'], units=results['metadatas'][0][i]['units'], popularity=results['metadatas'][0][i]['popularity'], relevance_lower_better=results['distances'][0][i])
-        series_list.add(series)
     
-    return series_list
+    results = []
+    for keyword in keywords:
+        # Assuming collection.query is defined and functional
+        keyword_results = collection.query(
+            query_texts=[keyword],
+            n_results=n_results
+        )
+        if verbose:
+            print("the keyword is", keyword, "and the results are", keyword_results)
+        results.append(keyword_results)
+    
+    query = ' '.join(keywords)
+
+    keyword_results = collection.query(query_texts=[query], n_results=n_results)
+    if verbose:
+        print("the query is", query, "and the results are", keyword_results)
+    results.append(keyword_results)
+
+
+    series_set = set()
+    
+    for keyword_results in results:
+        for i in range(len(keyword_results['ids'][0])):
+            series = SeriesForSearch(
+                fred_id=keyword_results['ids'][0][i],
+                title=keyword_results['metadatas'][0][i]['title'],
+                units=keyword_results['metadatas'][0][i]['units'],
+                popularity=keyword_results['metadatas'][0][i]['popularity'],
+                relevance_lower_better=keyword_results['distances'][0][i]
+            )
+            series_set.add(series)
+    
+    return series_set
 
 def search_tags_by_keyword(keywords: List[str], n_results:int = 5) -> None:
     '''
@@ -141,7 +168,7 @@ def get_series_from_tags(tags: List[str]) -> Set[SeriesForSearch]:
 
 
 def print_series_list(series_list:List[SeriesForSearch]) -> None:
-    series_list = list(filter(lambda x: x.relevance_lower_better <= 1, series_list))
+    series_list = list(filter(lambda x: not x.relevance_lower_better or x.relevance_lower_better <= 1, series_list))
     series_list.sort(key=lambda x: x.relevance_lower_better)
     for series in series_list:
         print("id:", series.fred_id)
@@ -151,7 +178,68 @@ def print_series_list(series_list:List[SeriesForSearch]) -> None:
         print("relevance:", series.relevance_lower_better)
         print("\n\n")
         print("------------------------")
+
+def rank_relevant_outputs(series_list:List[SeriesForSearch], query:str) -> SeriesForSearch:
+    instructor
+    try:
+    
+        return instructor_groq_client.chat.completions.create(response_model=ClassifiedSeries, messages=[
+            {"role": "system", "content": "You will be given a number of economic series from the user. Your job is to mark them as relevant or irrelevant for a given query and output it in the given format"}, {
+                "role": "user", "content":f"The user's query is {query}. The possible datasets are {series_list}"
+            }
+        ], model="llama3-70b-8192")
+    except Exception:
+        return rank_relevant_outputs(series_list=series_list, query=query) 
+
+def keyword_text_search(keywords: List[str]) -> List[SeriesForSearch]:
+    results_set = set()
+    cursor = Database.get_cursor()
+    for keyword in keywords:
+    # Use the LIKE command to search for each keyword separately
+        cursor.execute("""
+            SELECT fred_id, title, units, popularity
+            FROM series
+            WHERE title LIKE ?
+        """, (f'%{keyword}%',))
         
+        # Fetch all matching rows
+        rows = cursor.fetchall()
+        
+        # Add each row to the results set to avoid duplicates
+        for row in rows:
+            results_set.add(SeriesForSearch(
+                fred_id=row[0],
+                title=row[1],
+                units=row[2],
+                popularity=row[3]
+            ))
+
+# Close the database connection
+    
+    
+    # Return the results as a list
+    return list(results_set)
+
+def find_relevant_series(query:str, verbose:bool = False) -> ClassifiedSeries:
+    keyword_list = extract_keyword(query)
+    if verbose:
+        print("Extracted keywords:", keyword_list.word)
+    semantic_search_results = keyword_semantic_search(keyword_list.word, n_results=5)
+    
+    keyword_list = extract_keyword(query)
+    if verbose:
+        print("Extracted keywords:", keyword_list.word)
+    semantic_search_results = keyword_semantic_search(keyword_list.word, n_results=5)    
+    if verbose:    
+        print_series_list(list(semantic_search_results))
+    possible: ClassifiedSeries = rank_relevant_outputs(list(semantic_search_results), query=query)
+
+    if verbose:
+        print("the relevant series are", possible.relevant)
+        print("\n\n")
+        print("the not relevant series are", possible.notRelevant)
+    return possible
+
 
 if __name__ == "__main__":
     firstTime = True
@@ -161,8 +249,4 @@ if __name__ == "__main__":
         print("What is your query?")
         query = input()
         print(f"\nQuery: {query}")
-        keyword_list = extract_keyword(query)
-        print("Extracted keywords:", keyword_list.word)
-        search_results = search_series_by_keyword(keyword_list.word, n_results=5, )        
-        print_series_list(list(search_results))
-        firstTime = False
+        find_relevant_series(query=query, verbose=True)

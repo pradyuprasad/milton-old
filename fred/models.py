@@ -30,7 +30,12 @@ class SeriesForSearch(BaseModel):
     title:str
     units:str
     popularity: int
-    relevance_lower_better: float
+    relevance_lower_better: Optional[float]
 
     class Config:
         frozen = True
+
+class SeriesForRanking(BaseModel):
+    fred_id:str
+    title:str
+    units:str
