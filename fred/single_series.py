@@ -123,7 +123,7 @@ def ask_questions_about_series(series_list: List[SeriesForSearch], query:str):
             head_list.append(head)
         prompt = f'''
 
-You have these CSV files csv file - {output_file_list}. It has the schema, {head_list}. The date is in YYYY-MM-DD format, and the data is in float. Write me python code which answer's the user's question. Give as many details in the print statement as possible, all of these are going to be given to the highly-data curious user. The code should print that and that only. Do not plot anything, do not graph anything. 
+You have these CSV files csv file - {output_file_list}. It has the schema, {head_list}. The date is in YYYY-MM-DD format, and the data is in float. Write me python code which answer's the user's question. Give as many details in the print statement as possible, all of these are going to be given to the highly-data curious user. The code should print that and that only. If you have more than one dataset think hard on which one would be more relevant and timely (higher frequency). Do not plot anything, do not graph anything. 
 '''
         print(prompt)
         completion = openai_client.chat.completions.create(messages=[
@@ -148,7 +148,7 @@ if __name__ == "__main__":
     query = input()
     start = time.time()
     print("started at", start)
-    series_list: List[SeriesForSearch] = find_relevant_series(query=query, verbose=False).relevant
+    series_list: List[SeriesForSearch] = find_relevant_series(query=query, verbose=True).relevant
     end_time = time.time()
     print("took", end_time-start, "time for this to happen")
     print(series_list)
