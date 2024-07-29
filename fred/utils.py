@@ -8,7 +8,7 @@ except APIKeyNotFoundError as e:
     print(e)
     raise e
 
-def store_series(series_fred_id: str) -> bool:
+def store_series_in_DB(series_fred_id: str) -> bool:
     try:
         response = requests.get(f'https://api.stlouisfed.org/fred/series?series_id={series_fred_id}&api_key={FRED_API_KEY}&file_type=json')
         if response.status_code == 200:

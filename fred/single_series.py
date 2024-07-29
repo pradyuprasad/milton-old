@@ -5,10 +5,13 @@ from datetime import datetime
 from typing import Dict, List
 from .config import config, APIKeyNotFoundError
 from .database_ops import get_units, check_series_exists
-from .utils import store_series
+from .utils import store_series_in_DB
 from openai import OpenAI
 from groq import Groq
 import subprocess
+import time
+from .models import SeriesForSearch
+from .search_for_single_series import find_relevant_series, ClassifiedSeries
 import re
 import instructor
 import sqlite3
@@ -47,31 +50,38 @@ def remove_all_extras(code:str):
     
 
 
-def load_series_observations(series_fred_id: str, output_file: str) -> bool:
-    try:
-        url = f"https://api.stlouisfed.org/fred/series/observations?series_id={series_fred_id}&api_key={FRED_API_KEY}&file_type=json"
-        response = requests.get(url)
-        response.raise_for_status()  # This will raise an HTTPError if the HTTP request returned an unsuccessful status code
-        
-        ans = response.json()
-        observations = ans['observations']
+def load_series_observations(series_fred_id: str, output_file: str, verbose:bool = True) -> bool:
+    url = f"https://api.stlouisfed.org/fred/series/observations?series_id={series_fred_id}&api_key={FRED_API_KEY}&file_type=json"
+    response = requests.get(url)
+    response.raise_for_status()
 
-        observations_data = [
-            {'date': datetime.strptime(obs['date'], '%Y-%m-%d').date(), 'value': float(obs['value'])}
-            for obs in observations if 'date' in obs and 'value' in obs
-        ]
-        print(observations_data[0])
-        
-        # Convert list of dictionaries to DataFrame
-        df = pd.DataFrame(observations_data)
-        
-        # Write DataFrame to CSV
-        df.to_csv(output_file, index=False)
-        return True
-    
-    except (requests.exceptions.RequestException, ValueError, KeyError) as e:
-        print(f"Error occurred: {e}")
-        return False
+    ans = response.json()
+    observations = ans['observations']
+    observations_data = []
+
+    for obs in observations:
+        if 'date' in obs and 'value' in obs:
+            try:
+                if (obs['value']) != '.':
+                    value = float(obs['value'])
+                    observations_data.append({
+                        'date': datetime.strptime(obs['date'], '%Y-%m-%d').date(),
+                        'value': value
+                    })
+            except ValueError:
+                print(f"Error converting value to float for {series_fred_id}: date = {obs['date']}, value = {obs['value']}")
+
+    if verbose:
+        print("got data for", series_fred_id)
+        if observations_data:
+            print(observations_data[0])
+        else:
+            print("No valid observations found")
+
+    df = pd.DataFrame(observations_data)
+    df.to_csv(output_file, index=False)
+    print("saved csv", output_file)
+    return True    
     
 def run_code(file_name:str, code:str):
     with open(file_name, 'w') as file:
@@ -86,27 +96,36 @@ def run_code(file_name:str, code:str):
 
         
 
-def ask_questions_about_series(series_fred_id: str, query:str):
+def ask_questions_about_series(series_list: List[SeriesForSearch], query:str):
     try:
-        output_file = f"{series_fred_id}.csv" 
-        series_exists = check_series_exists(series_fred_id)
-        if not series_exists:
-            store_series(series_fred_id=series_fred_id)
-        else:
-            print("series exists")
-        
-        units = get_units(fred_id=series_fred_id)
-        if not units:
-            raise ValueError("unable to get units")
-        
-        load_series_observations(series_fred_id=series_fred_id, output_file=output_file)
+        output_file_list = []
+        head_list = []
+        for series in series_list:
+            fred_id = series.fred_id
+            output_file = f"{fred_id}.csv" 
+            series_exists = check_series_exists(fred_id)
+            if not series_exists:
+                store_series_in_DB(series_fred_id=fred_id)
+            else:
+                print("series exists")
+            string_to_append = f"Series name: {series.title}: csv_path:{output_file}. Units:{series.units}"
+            output_file_list.append(string_to_append)
+            units = get_units(fred_id=fred_id)
+            if not units:
+                raise ValueError("unable to get units")
+            
+            load_series_observations(series_fred_id=fred_id, output_file=output_file, verbose=True)
 
-        df = pd.read_csv(output_file)
-        head = df.head()
+
+
+            df = pd.read_csv(output_file)
+            head = f"{output_file}: " + str(df.head())
+            head_list.append(head)
         prompt = f'''
 
-    You have this csv file - {output_file}. It has the schema, {head}. The date is in YYYY-MM-DD format, and the data is in float. The units of the data are {units}. Write me python code which answer's the user's question. The code should print that and that only. Do not plot anything, do not graph anything.
-    '''
+You have these CSV files csv file - {output_file_list}. It has the schema, {head_list}. The date is in YYYY-MM-DD format, and the data is in float. Write me python code which answer's the user's question. Give as many details in the print statement as possible, all of these are going to be given to the highly-data curious user. The code should print that and that only. Do not plot anything, do not graph anything. 
+'''
+        print(prompt)
         completion = openai_client.chat.completions.create(messages=[
             {"role": "system", "content": prompt}, 
             {"role": "user", "content": f"The user query is {query}"}
@@ -118,8 +137,22 @@ def ask_questions_about_series(series_fred_id: str, query:str):
 
     except Exception as e:
         print(e)
+        raise e
         return None
 
 
-# Example usage
-ask_questions_about_series("UNRATE", "For how many months since the start of COVID-19 was unemployment consecutively going up? When did it stop going up and turn down. Print all the details a reader might know while reading the answer")
+
+if __name__ == "__main__":
+    firstTime = True
+    print("What is your query?")
+    query = input()
+    start = time.time()
+    print("started at", start)
+    series_list: List[SeriesForSearch] = find_relevant_series(query=query, verbose=False).relevant
+    end_time = time.time()
+    print("took", end_time-start, "time for this to happen")
+    print(series_list)
+    
+    
+    ask_questions_about_series(series_list, query)
+

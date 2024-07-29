@@ -75,7 +75,7 @@ def fetch_series_for_tag(api_key, tag_name, limit=100, offset=0):
         return []
 
 # Store series in the database
-def store_series(series_list, conn):
+def store_series_in_DB(series_list, conn):
     c = conn.cursor()
     for series in series_list:
         c.execute('''
@@ -187,7 +187,7 @@ def main():
                 end = True
             
             print(f"Fetched {len(series_list)} series for tag '{tag_name}' with offset {offset}")
-            store_series(series_list, conn)
+            store_series_in_DB(series_list, conn)
             offset += 1000
 
     # Sort stored series by popularity and fetch tags for the top 100 series
