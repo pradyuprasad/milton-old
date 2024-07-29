@@ -34,3 +34,8 @@ class SeriesForSearch(BaseModel):
 
     class Config:
         frozen = True
+
+class SeriesForRanking(BaseModel):
+    fred_id:str
+    title:str
+    units:str

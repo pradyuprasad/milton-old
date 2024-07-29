@@ -6,17 +6,15 @@ from pydantic import BaseModel
 from .config import config, APIKeyNotFoundError
 from openai import OpenAI
 from groq import Groq
-from .models import SeriesForSearch
+from .models import SeriesForSearch, SeriesForRanking
 from .database import Database, DatabaseConnectionError
-chroma_client_temp = chromadb.Client()
-series_collection = chroma_client_temp.create_collection(name="temp_series_collection")
+os.environ['TOKENIZERS_PARALLELISM'] = 'false'
 
 print("Imported libraries")
 
 # Initialize Chroma client with persistent storage
 chroma_persist_directory = os.path.join(os.path.dirname(__file__), "chroma_db")
 chroma_client = chromadb.PersistentClient(path=chroma_persist_directory)
-
     
 # Get the collection
 collection = chroma_client.get_collection("fred-economic-series")
@@ -25,14 +23,21 @@ collection = chroma_client.get_collection("fred-economic-series")
 class Keywords(BaseModel):
     word: List[str]
 
+class ClassifiedSeries(BaseModel):
+    relevant: List[SeriesForSearch]
+    notRelevant: List[SeriesForSearch]
+
 try:
     FRED_API_KEY = config.get_api_key('FRED_API_KEY')
     OPENAI_API_KEY = config.get_api_key("OPENAI_API_KEY")
     openai_client = OpenAI(api_key=OPENAI_API_KEY)
     client = Groq(api_key=config.get_api_key("GROQ_API_KEY"))
     instructor_client = instructor.from_openai(OpenAI(api_key=OPENAI_API_KEY))
+    instructor_groq_client = instructor.from_groq(Groq(api_key=config.get_api_key("GROQ_API_KEY")))
 except APIKeyNotFoundError as e:
     raise e
+
+
 
 def extract_keyword(user_query: str) -> Keywords:
     return instructor_client.chat.completions.create(
@@ -57,9 +62,11 @@ Respond with only the list of search terms, nothing else.
         ]
     )
 
-def search_series_by_keyword(keywords: List[str], n_results: int = 5, query:str = None) -> Set[SeriesForSearch]:
+def keyword_semantic_search(keywords: List[str], n_results: int = 5, query:str = None) -> Set[SeriesForSearch]:
     if not query:
         query = " ".join(keywords)
+    else:
+        print("not using keywords!\n")
     results = collection.query(
         query_texts=[query],
         n_results=n_results
@@ -151,7 +158,20 @@ def print_series_list(series_list:List[SeriesForSearch]) -> None:
         print("relevance:", series.relevance_lower_better)
         print("\n\n")
         print("------------------------")
-        
+
+def rank_relevant_outputs(series_list:List[SeriesForSearch], query:str) -> SeriesForSearch:
+    instructor
+    print(series_list)
+    try:
+    
+        return instructor_groq_client.chat.completions.create(response_model=ClassifiedSeries, messages=[
+            {"role": "system", "content": "You will be given a number of economic series from the user. Your job is to mark them as relevant or irrelevant for a given query and output it in the given format"}, {
+                "role": "user", "content":f"The user's query is {query}. The possible datasets are {series_list}"
+            }
+        ], model="llama3-70b-8192")
+    except Exception:
+        return rank_relevant_outputs(series_list=series_list, query=query) 
+
 
 if __name__ == "__main__":
     firstTime = True
@@ -163,6 +183,11 @@ if __name__ == "__main__":
         print(f"\nQuery: {query}")
         keyword_list = extract_keyword(query)
         print("Extracted keywords:", keyword_list.word)
-        search_results = search_series_by_keyword(keyword_list.word, n_results=5, )        
+        search_results = keyword_semantic_search(keyword_list.word, n_results=5, query=query)        
         print_series_list(list(search_results))
+        possible: ClassifiedSeries = rank_relevant_outputs(list(search_results), query=query)
+        print("\n\n") 
+        print("the relevant series are:", possible.relevant)
+        print("\n\n")
+        print("the irrelevant series are:", possible.notRelevant)
         firstTime = False
