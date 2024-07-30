@@ -1,6 +1,7 @@
 from pydantic import BaseModel
-from typing import Optional, List
+from typing import Optional, List, Any, Union, Literal
 from datetime import datetime, date
+from enum import Enum
 
 class Series(BaseModel):
     fred_id: str
@@ -46,3 +47,9 @@ class Keywords(BaseModel):
 class ClassifiedSeries(BaseModel):
     relevant: List[SeriesForSearch]
     notRelevant: List[SeriesForSearch]
+
+class Search(BaseModel):
+    query: str
+
+class SearchList(BaseModel):
+    queries: List[Search]

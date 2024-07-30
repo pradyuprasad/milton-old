@@ -59,6 +59,7 @@ def keyword_semantic_search(keywords: List[str], n_results: int = 5, verbose:boo
 
     
     results = []
+    ''' # TODO: Decide if this is needed or not
     for keyword in keywords:
         # Assuming collection.query is defined and functional
         keyword_results = collection.query(
@@ -68,6 +69,7 @@ def keyword_semantic_search(keywords: List[str], n_results: int = 5, verbose:boo
         if verbose:
             print("the keyword is", keyword, "and the results are", keyword_results)
         results.append(keyword_results)
+    '''
     
     query = ' '.join(keywords)
 
