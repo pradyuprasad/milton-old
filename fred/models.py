@@ -39,3 +39,10 @@ class SeriesForRanking(BaseModel):
     fred_id:str
     title:str
     units:str
+
+class Keywords(BaseModel):
+    word: List[str]
+
+class ClassifiedSeries(BaseModel):
+    relevant: List[SeriesForSearch]
+    notRelevant: List[SeriesForSearch]

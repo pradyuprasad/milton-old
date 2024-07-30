@@ -2,11 +2,10 @@ import chromadb
 import os
 from typing import List, Dict, Set
 import instructor
-from pydantic import BaseModel
 from .config import config, APIKeyNotFoundError
 from openai import OpenAI
 from groq import Groq
-from .models import SeriesForSearch, SeriesForRanking
+from .models import SeriesForSearch, Keywords, ClassifiedSeries
 from .database import Database, DatabaseConnectionError
 os.environ['TOKENIZERS_PARALLELISM'] = 'false'
 
@@ -20,12 +19,6 @@ chroma_client = chromadb.PersistentClient(path=chroma_persist_directory)
 collection = chroma_client.get_collection("fred-economic-series")
 #tags_collection = chroma_client.get_collection("fred-tags")
 
-class Keywords(BaseModel):
-    word: List[str]
-
-class ClassifiedSeries(BaseModel):
-    relevant: List[SeriesForSearch]
-    notRelevant: List[SeriesForSearch]
 
 try:
     FRED_API_KEY = config.get_api_key('FRED_API_KEY')

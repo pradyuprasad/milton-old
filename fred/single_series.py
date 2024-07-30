@@ -11,12 +11,9 @@ from groq import Groq
 import subprocess
 import time
 from .models import SeriesForSearch
-from .search_for_single_series import find_relevant_series, ClassifiedSeries
+from .search_for_single_series import find_relevant_series 
 import re
 import instructor
-import sqlite3
-from pydantic import BaseModel
-from .database import Database, DatabaseConnectionError
 
 
 
