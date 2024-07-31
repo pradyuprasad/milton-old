@@ -1,5 +1,5 @@
 # models.py
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from typing import Optional, List, Any, Union, Literal
 from datetime import datetime, date
 from enum import Enum
@@ -54,3 +54,25 @@ class Search(BaseModel):
 
 class SearchList(BaseModel):
     queries: List[Search]
+
+class DAGNode(BaseModel):
+    id: str
+    dependencies: List[str] = Field(default_factory=list)
+    node_type: Literal["search", "code", "display"]
+    task: str
+    output: Optional[Any] = None
+
+class SearchNode(DAGNode):
+    node_type: Literal["search"] = "search"
+    query: str
+
+class CodeNode(DAGNode):
+    node_type: Literal["code"] = "code"
+    code: str
+
+class DisplayNode(DAGNode):
+    node_type: Literal["display"] = "display"
+    display_type: str  # e.g., "chart", "table", etc.
+
+class DAG(BaseModel):
+    nodes: List[DAGNode]
