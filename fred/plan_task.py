@@ -33,11 +33,11 @@ Follow these guidelines for each search:
 
 Aim to provide a comprehensive set of searches that would allow for a thorough analysis of the topic in question. Your list should enable the creation of a detailed report covering all aspects mentioned in the user's query.
 
-The user's query will be provided to you as a parameter. Please generate your search list based on this query.'''
+'''
 
-query = "Write a report on the construction industry, it's output, employment and the prices affecting it"
+print("ask your question")
+query = input()
 
-print(prompt)
 
 start = time.time()
 
