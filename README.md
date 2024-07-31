@@ -11,8 +11,8 @@ Milton is a tool that makes it extremely easy to find economic data, analyse it,
 - [x] Write feature to search in FRED
 - [x] Write feature to analyse data for one database only
 - [x] Write feature to connect the above
-- [ ] Write feature to make multi-step plans for analysing multiple datasets
-- [ ] Write feature to use plans to analyse multiple datasets
+- [x] Write feature to make multi-step plans for analysing multiple datasets
+- [x] Write feature to use plans to analyse multiple datasets
 - [ ] Write feature to graph data as per user requirements
 - [ ] Write frontend to show all of this
 

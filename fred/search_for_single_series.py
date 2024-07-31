@@ -1,12 +1,12 @@
+# search_for_single_series.py
 import chromadb
 import os
 from typing import List, Dict, Set
 import instructor
-from pydantic import BaseModel
 from .config import config, APIKeyNotFoundError
 from openai import OpenAI
 from groq import Groq
-from .models import SeriesForSearch, SeriesForRanking
+from .models import SeriesForSearch, Keywords, ClassifiedSeries
 from .database import Database, DatabaseConnectionError
 os.environ['TOKENIZERS_PARALLELISM'] = 'false'
 
@@ -20,12 +20,6 @@ chroma_client = chromadb.PersistentClient(path=chroma_persist_directory)
 collection = chroma_client.get_collection("fred-economic-series")
 #tags_collection = chroma_client.get_collection("fred-tags")
 
-class Keywords(BaseModel):
-    word: List[str]
-
-class ClassifiedSeries(BaseModel):
-    relevant: List[SeriesForSearch]
-    notRelevant: List[SeriesForSearch]
 
 try:
     FRED_API_KEY = config.get_api_key('FRED_API_KEY')
@@ -66,6 +60,7 @@ def keyword_semantic_search(keywords: List[str], n_results: int = 5, verbose:boo
 
     
     results = []
+    ''' # TODO: Decide if this is needed or not
     for keyword in keywords:
         # Assuming collection.query is defined and functional
         keyword_results = collection.query(
@@ -75,6 +70,7 @@ def keyword_semantic_search(keywords: List[str], n_results: int = 5, verbose:boo
         if verbose:
             print("the keyword is", keyword, "and the results are", keyword_results)
         results.append(keyword_results)
+    '''
     
     query = ' '.join(keywords)
 
@@ -220,7 +216,7 @@ def keyword_text_search(keywords: List[str]) -> List[SeriesForSearch]:
     # Return the results as a list
     return list(results_set)
 
-def find_relevant_series(query:str, verbose:bool = False) -> ClassifiedSeries:
+def find_relevant_series(query:str, verbose:bool = False) -> List[SeriesForSearch]:
     keyword_list = extract_keyword(query)
     if verbose:
         print("Extracted keywords:", keyword_list.word)
@@ -238,7 +234,7 @@ def find_relevant_series(query:str, verbose:bool = False) -> ClassifiedSeries:
         print("the relevant series are", possible.relevant)
         print("\n\n")
         print("the not relevant series are", possible.notRelevant)
-    return possible
+    return possible.relevant
 
 
 if __name__ == "__main__":
