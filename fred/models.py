@@ -55,24 +55,50 @@ class Search(BaseModel):
 class SearchList(BaseModel):
     queries: List[Search]
 
-class DAGNode(BaseModel):
+class DAGNodeBase(BaseModel):
     id: str
     dependencies: List[str] = Field(default_factory=list)
     node_type: Literal["search", "code", "display"]
     task: str
+
+class DAGNodeWithOutput(DAGNodeBase):
     output: Optional[Any] = None
 
-class SearchNode(DAGNode):
-    node_type: Literal["search"] = "search"
+class SearchNode(DAGNodeBase):
+    node_type: str = "SearchNode"
     query: str
 
-class CodeNode(DAGNode):
-    node_type: Literal["code"] = "code"
-    code: str
+class SearchNodeWithOutput(SearchNode, DAGNodeWithOutput):
+    pass
 
-class DisplayNode(DAGNode):
-    node_type: Literal["display"] = "display"
-    display_type: str  # e.g., "chart", "table", etc.
+class CodeNode(DAGNodeBase):
+    node_type: str = "CodeNode"
+    
+
+class CodeNodeWithOutput(CodeNode, DAGNodeWithOutput):
+    pass
+
+class DisplayNode(DAGNodeBase):
+    node_type: str = "DisplayNode"
+    display_type: str
+
+
+class DisplayNodeWithOutput(DisplayNode, DAGNodeWithOutput):
+    pass
+
+
+NodeType = Union[SearchNode, CodeNode, DisplayNode]
 
 class DAG(BaseModel):
-    nodes: List[DAGNode]
+    nodes: List[NodeType]
+
+
+class DAGWithOutput(BaseModel):
+    nodes: List[DAGNodeWithOutput]
+
+class InstructionsList(BaseModel):
+    instructions: List[str]
+
+class CodeBlock(BaseModel):
+    thoughts: str
+    code: str

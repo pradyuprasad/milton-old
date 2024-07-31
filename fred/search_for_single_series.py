@@ -216,7 +216,7 @@ def keyword_text_search(keywords: List[str]) -> List[SeriesForSearch]:
     # Return the results as a list
     return list(results_set)
 
-def find_relevant_series(query:str, verbose:bool = False) -> ClassifiedSeries:
+def find_relevant_series(query:str, verbose:bool = False) -> List[SeriesForSearch]:
     keyword_list = extract_keyword(query)
     if verbose:
         print("Extracted keywords:", keyword_list.word)
@@ -234,7 +234,7 @@ def find_relevant_series(query:str, verbose:bool = False) -> ClassifiedSeries:
         print("the relevant series are", possible.relevant)
         print("\n\n")
         print("the not relevant series are", possible.notRelevant)
-    return possible
+    return possible.relevant
 
 
 if __name__ == "__main__":
