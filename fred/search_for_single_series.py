@@ -48,10 +48,11 @@ Follow these rules strictly:
 1. Provide only full terms as they would appear in the FRED database. For example, use "Gross Domestic Product" instead of "GDP".
 2. Expand all common economic acronyms to their full forms.
 3. Focus on specific economic indicators, measurements, or concepts.
-4. Provide at most 3 key terms, prioritizing specificity and relevance to the FRED database.
+4. Provide at most 3 key terms, prioritizing specificity and relevance to the FRED database. 
 5. Do not include general words like "current", "rate" unless they are part of a specific economic term.
 6. If the query mentions a specific country, include the full country name as part of the relevant economic term(s).
 Respond with only the list of search terms, nothing else.
+7. Be strict in your question. Ensure that the geographic region and all other data match what the user asked
             """}
         ]
     )
@@ -95,71 +96,7 @@ def keyword_semantic_search(keywords: List[str], n_results: int = 5, verbose:boo
     
     return series_set
 
-def search_tags_by_keyword(keywords: List[str], n_results:int = 5) -> None:
-    '''
-    results = tags_collection.query(
-        query_texts=keywords,
-        n_results=n_results
-    )
-    tags_ouputs = set()
-    for tag_list in results['documents']:
-        for tag in tag_list[:3]:
-            tags_ouputs.add(tag)
-    print(results)
-    tags_ouputs = list(tags_ouputs)
-    return tags_ouputs
-    '''
 
-def get_series_from_tags(tags: List[str]) -> Set[SeriesForSearch]:
-    cursor = Database.get_cursor()
-    placeholders = ','.join('?' for _ in tags)
-    cursor.execute(f'''
-    SELECT s.fred_id, s.title, s.units FROM series s
-    JOIN series_tags st ON s.id = st.series_id
-    JOIN tags t ON st.tag_id = t.id
-    WHERE t.name IN ({placeholders})
-    ''', tags)
-
-    ans = cursor.fetchall()
-    
-    # Create a new client and collection
-    temp_client = chromadb.Client()
-    temp_collection = temp_client.create_collection(name="temp_tag_series")
-
-    # Process series and add to collection in one pass
-    seen_ids = set()
-    for row in ans:
-        fred_id, title, units = row
-        if fred_id not in seen_ids:
-            seen_ids.add(fred_id)
-            document = f"{title} {units}".lower()
-            temp_collection.add(
-                documents=[document],
-                metadatas=[{"fred_id": fred_id, "title": title, "units": units}],
-                ids=[fred_id]
-            )
-            print(f"Added: FRED ID: {fred_id}, Title: {title}, Units: {units}")
-
-    # Query the collection if we added any documents
-    if seen_ids:
-        query = " ".join(tags)
-        results = temp_collection.query(
-            query_texts=[query],
-            n_results=min(5, len(seen_ids))
-        )
-        final_set = set()
-        for i in range(len(results['ids'][0])):
-            series = SeriesForSearch(fred_id=results['ids'][0][i], title=results['metadatas'][0][i]['title'], units=results['metadatas'][0][i]['units'], popularity=results['metadatas'][0][i]['popularity'])
-            final_set.add(series)
-
-    else:
-        final_set = set()
-
-    # Clean up
-    #del temp_client
-    del seen_ids
-
-    return final_set
 
 
 
@@ -221,13 +158,6 @@ def find_relevant_series(query:str, verbose:bool = False) -> List[SeriesForSearc
     if verbose:
         print("Extracted keywords:", keyword_list.word)
     semantic_search_results = keyword_semantic_search(keyword_list.word, n_results=5)
-    
-    keyword_list = extract_keyword(query)
-    if verbose:
-        print("Extracted keywords:", keyword_list.word)
-    semantic_search_results = keyword_semantic_search(keyword_list.word, n_results=5)    
-    if verbose:    
-        print_series_list(list(semantic_search_results))
     possible: ClassifiedSeries = rank_relevant_outputs(list(semantic_search_results), query=query)
 
     if verbose:
@@ -246,3 +176,4 @@ if __name__ == "__main__":
         query = input()
         print(f"\nQuery: {query}")
         find_relevant_series(query=query, verbose=True)
+        firstTime = False

@@ -105,6 +105,16 @@ def execute_dag(dag: DAG, query:int) -> DAGWithOutput:
 
     return DAGWithOutput(nodes=output_nodes)
 
+def makeDAG(query:str) -> DAG:
+    return client.chat.completions.create(
+        response_model=DAG,
+        model="gpt-4o",
+        messages=[
+            {"role": "system", "content": prompt},
+            {"role": "user", "content": f"The user query is: {query}"}
+        ]
+    )
+
 def main():
     print("Ask your question")
     query = input()

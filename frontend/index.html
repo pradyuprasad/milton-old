@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economic Data Analyzer</title>
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Economic Data Analyzer</h1>
+        <div class="query-section">
+            <input type="text" id="queryInput" placeholder="Enter your economic query">
+            <button id="analyzeBtn">Analyze</button>
+        </div>
+        <div id="resultsContainer"></div>
+        <div id="dagVisualization"></div>
+        <div id="searchNodesContainer" class="search-nodes-container"></div>
+        <div class="next-button-container">
+            <button id="nextBtn" style="display:none;">Next</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
